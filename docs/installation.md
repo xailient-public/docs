@@ -93,7 +93,7 @@ __Activate your license__
 
 In xailient folder of the install location, go to scripts folder and execute xailient-install script
 
-![](../img/script_folder.png)
+![](../img/scripts_folder.png)
 
 <pre><code>sudo ./xailient-install</code></pre>
 
