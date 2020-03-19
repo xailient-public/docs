@@ -113,6 +113,8 @@ The script reads an image named “beatles.jpg” from xailient/data folder, run
 
 Now go to xailient/data folder to see the input and output images.
 
+![](../img/data_folder.png)
+
 Input Image | Output Image
 :-------------------------:|:-------------------------:
 ![](../img/beatles.jpg)   |  ![](../img/beatles_output.jpg)
