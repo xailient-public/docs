@@ -4,9 +4,10 @@
 
 ## [Sample Code](/en/latest/sample_code/)
 
+## [YouTube Channel](https://www.youtube.com/channel/UCCv1TVIY3KmJbern-edBRvw)
+
 ## [Blogs](https://www.xailient.com/blog)
 
-## [YouTube](https://www.youtube.com/channel/UCCv1TVIY3KmJbern-edBRvw)
 
 [Face Tracking in Python using Xailient Face Detector and dlib](https://www.xailient.com/post/face-tracking-python-dlib)
 
