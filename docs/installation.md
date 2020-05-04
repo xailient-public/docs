@@ -175,7 +175,7 @@ Go to the Console, navigate to __MANAGE AI MODELS__ and click on the model which
 Scroll down to __Evaluation Results__ where you can find __BEST THRESHOLD__.
 
 <p align="center">
-  <img src="../img/console/evaluation_thresh.png">
+  <img src="../img/console/Evaluation_thresh.png">
 </p>
 
 Then using a text editor of your choice, edit the basic_samples.py script to include the value for __BEST THRESHOLD__ as found above.
