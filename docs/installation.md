@@ -5,77 +5,139 @@ If you are looking for documentation for installion of Xailient SDK using SDK pa
 
 ## Device Setup
 
-To meet the minimum requirements, your device must be a x86_64 architecture device. We’ve tested the following operating systems:
+To meet the minimum requirements, your device must be a x86_64 or ARM32 architecture device. We’ve tested the following operating systems:
 
 * Ubuntu 18.04 LTS
+* Ubuntu 19.04
+* Raspbian Buster
+
+For ARM32, we have tested on the following device:
+
+* RaspberryPi 3B+
 
 __Minimum software requirements:__
 
+* Glibc 2.27
 * Python3.7
 * Pip for python3.7
 * OpenCV
+* Curl
+* VirtualEnv
 
 If your device does not meet the minimum software required, please follow the instructions below to install them.
 
 __Download the package lists and update information__
 
-<pre><code>sudo apt-get update</code></pre>
-
-![](../img/x86_64/apt_update.png)
+```bash
+$ sudo apt-get update
+```
 
 *NOTE: apt-get update to download the package lists from the repositories and "update" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.*
 
 __Install python3.7__
 
-<pre><code>sudo apt-get install python3.7</code></pre>
-
-![](../img/x86_64/install_python.png)
+```bash
+$ sudo apt-get install python3.7
+```
 
 __Install pip for python3.7__
 
-<pre><code>sudo apt-get install python3-pip</code></pre>
-
-![](../img/x86_64/install_pip.png)
+```bash
+$ sudo apt-get install python3-pip
+```
 
 __Install OpenCV__
-<pre><code>sudo apt-get install python-opencv</code></pre>
 
-![](../img/x86_64/install_opencv.png)
+```bash
+$ sudo apt-get install python-opencv
+```
+
+__Install Curl__
+
+```bash
+$ sudo apt-get install curl
+```
+
+__Install VirtualEnv__
+
+```bash
+$ python3.7 -m pip install --user virtualenv
+```
+
+__Create a Virtual Environment (Recommended)__
+
+Create a new python virtual environment to isolate package installation for the system.
+
+```bash
+$ python3 -m venv env
+```
+
+Activate the virtual environment.
+
+Before you can start using the virtual environment for package installations, you will need to activate it. Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.
+
+```bash
+$ source env/bin/activate
+```
+
+To deactivate the virtual environment later,
+
+```bash
+(env) $ deactivate
+```
 
 ## Install XailientSDK
-
-__Check if python 3.7 is installed__
-
-![](../img/x86_64/check_python.png)
-
-If python3.7 is not installed, please refer to Device Setup to install it.
-
-__Check if pip for python3.7 is installed__
-
-![](../img/x86_64/check_pip.png)
-
-If pip for python3.7 is not installed, please refer to Device Setup to install it.
 
 *NOTE: In 18.04 Ubuntu, by default __pip3__ is for python3.6. So we will use __python3.7 -m pip__ command instead to use pip for python3.7.
 If pip3 for your device defaults to python3.7, feel free to replace the command __python3.7 -m pip__ with __pip3__.*
 
+__Get SDK Wheel Link__
+
+Go to the Console and navigate to __MANAGE AI MODELS__. For the model you want to deploy, select the SDK you have build for your target platform. 
+
+_[NOTE: If you have not build an SDK yet, refer to __Build SDK__ section of the documentation.]_
+
+Click on the target platform for the model to copy the SDK link.
+
+<p align="center">
+  <img src="../img/console/CopySDKLink.png">
+</p>
+
 __Install SDK Wheel__
 
-<pre><code>python3.7 -m pip install “&lt;SDK WHEEL URL&gt;”</code></pre>
+```bash
+(env) $ python3.7 -m pip install "<SDK WHEEL URL>"
+```
 
-*NOTE: Replace &lt;SDK WHEEL URL&gt; with your wheel url.*
-
-![](../img/x86_64/install_xailient.png)
+*NOTE: Replace &lt;SDK WHEEL URL&gt; with the SDK link you copied earlier from the console.*
 
 __Info about xailient sdk installed__
 
-<pre><code>python3.7 -m pip show xailient</code></pre>
+```bash
+(env) $ python3.7 -m pip show xailient
+```
 
-![](../img/x86_64/check_xailient.png)
+<p align="center">
+  <img src="../img/x86_64/check_xailient.png">
+</p>
 
 You can get information about the version of xailient sdk installed, support email address, and location of the installation. 
 
+_[NOTE: Keep note of the install location “Location” as you will need it in the steps below.]_
+
+__Go to Xailient Installation Folder__
+
+To go to xailient folder, use the following command. If you do not know the install location, please refer to __“Info about xailient sdk installed”__ section above.
+
+```bash
+(env) $ cd <Xailient Install Location>/xailient
+```
+
 __Xailient SDK contents__
+
+```bash
+(env) $ ls
+```
 
 * bin/ -- Executables required for initial registration
 * data/ -- Image files you can use with the sample applications
@@ -83,35 +145,54 @@ __Xailient SDK contents__
 * scripts/ -- License activation scripts
 * sharedLib_x86_64/ --Sample models that can be installed or linked with your applications
 
+
 __Install tflite runtime__
 
-Go to xailient folder and install the tflite runtime using requirements.txt file.
+Install the tflite runtime using requirements.txt file.
 
-<pre><code>python3.7 -m pip install -r requirements.txt</code></pre>
+```bash
+(env) $ python3.7 -m pip install -r requirements.txt
+```
 
 __Activate your license__
 
-In xailient folder of the install location, go to scripts folder and execute xailient-install script
+Go to __scripts__ folder and execute xailient-install script
 
-![](../img/x86_64/scripts_folder.png)
-
-<pre><code>sudo ./xailient-install</code></pre>
-
-![](../img/x86_64/activate_license.png)
+```bash
+(env) $ cd scripts
+(env) $ sudo ./xailient-install
+```
 
 ## Run sample code
 
-In the xailient folder of the install location, go to samples folder. This folder contains a sample python script named “basic_samples.py” that demonstrates how to use the xailient sdk. 
+In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named “basic_samples.py” that demonstrates how to use the xailient sdk. 
 
-![](../img/x86_64/sample_folder.png)
+The script reads an image named “beatles.jpg” from __data__ folder, runs the detection sdk on this image and saves output to “beatles_output.jpg” in the same folder.
 
-The script reads an image named “beatles.jpg” from xailient/data folder, runs the detection sdk on this image and saves output to “beatles_output.jpg” in the same folder.
+Before we can run this script, we need to ensure that we give the OPTIMAL THRESHOLD.
 
-<pre><code>python3.7 basic_samples.py</code></pre>
+Go to the Console, navigate to __MANAGE AI MODELS__ and click on the model which you have installed. 
+Scroll down to __Evaluation Results__ where you can find __BEST THRESHOLD__.
 
-![](../img/x86_64/run_sample_code.png)
+<p align="center">
+  <img src="../img/console/evaluation_thresh.png">
+</p>
 
-Now go to xailient/data folder to see the input and output images.
+Then using a text editor of your choice, edit the basic_samples.py script to include the value for __BEST THRESHOLD__ as found above.
+
+<p align="center">
+  <img src="../img/console/best_thresh.png">
+</p>
+
+Now run the sample script.
+
+
+```bash
+(env) $ cd ../samples
+(env) $ python3.7 basic_samples.py
+```
+
+Now go to __data__ folder to see the input and output images.
 
 ![](../img/x86_64/data_folder.png)
 
@@ -120,6 +201,31 @@ Input Image | Output Image
 ![](../img/x86_64/beatles.jpg)   |  ![](../img/x86_64/beatles_output.jpg)
 
 
+## Update Xailient SDK Model
+
+```bash
+(env) $ python3.7 -m pip install "<SDK WHEEL URL>"
+```
+
+When you install a new SDK with a different model using pip install, you do not need to run the licence activation script again.
+
 ## Uninstall Xailient
 
-<pre><code>python3.7 -m pip uninstall xailient</code></pre>
+Go to xailient/scripts folder and run the uninstalltion script.
+
+```bash
+(env) $ ../scripts
+(env) $ sudo ./xailient-uninstall
+```
+
+Pip uninstall xailient
+
+```bash
+(env) $ python3.7 -m pip uninstall xailient
+```
+
+Keep in mind that after uninstall, the data folder and sample folder will remain.
+When you install a new SDK with a different model, these folders will be reintegrated into the SDK. This allows users to easily move data and scripts across different SDKs.
+
+Note that any changes to the basic_sample.py python script will be overwritten so keep a backup if you intend to keep any changes.
+

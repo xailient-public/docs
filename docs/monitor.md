@@ -16,3 +16,8 @@ If you have not deployed any model yet, this is what your dashboard should look 
 
 Once you install a model on a device successfully, it will be listed on this page.
 
+<p align="center">
+    <img src="../img/console/monitor_devices.png">
+</p>
+
+When you start using the SDK, you can see the frames you have used for each model on all devices here as well.
