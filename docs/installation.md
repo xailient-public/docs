@@ -1,4 +1,4 @@
-# Getting Started
+# Deploy Your AI
 
 *NOTE: This version of the documentation is for installation of Xailient SDK using wheel file (.wh). 
 If you are looking for documentation for installion of Xailient SDK using SDK package, please visit our old [documentation](https://xailient.readthedocs.io/en/latest/installation/).*
@@ -21,7 +21,7 @@ __Download the package lists and update information__
 
 <pre><code>sudo apt-get update</code></pre>
 
-![](img/apt_update.png)
+![](../img/x86_64/apt_update.png)
 
 *NOTE: apt-get update to download the package lists from the repositories and "update" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.*
 
@@ -29,30 +29,30 @@ __Install python3.7__
 
 <pre><code>sudo apt-get install python3.7</code></pre>
 
-![](../img/install_python.png)
+![](../img/x86_64/install_python.png)
 
 __Install pip for python3.7__
 
 <pre><code>sudo apt-get install python3-pip</code></pre>
 
-![](../img/install_pip.png)
+![](../img/x86_64/install_pip.png)
 
 __Install OpenCV__
 <pre><code>sudo apt-get install python-opencv</code></pre>
 
-![](../img/install_opencv.png)
+![](../img/x86_64/install_opencv.png)
 
 ## Install XailientSDK
 
 __Check if python 3.7 is installed__
 
-![](../img/check_python.png)
+![](../img/x86_64/check_python.png)
 
 If python3.7 is not installed, please refer to Device Setup to install it.
 
 __Check if pip for python3.7 is installed__
 
-![](../img/check_pip.png)
+![](../img/x86_64/check_pip.png)
 
 If pip for python3.7 is not installed, please refer to Device Setup to install it.
 
@@ -65,13 +65,13 @@ __Install SDK Wheel__
 
 *NOTE: Replace &lt;SDK WHEEL URL&gt; with your wheel url.*
 
-![](../img/install_xailient.png)
+![](../img/x86_64/install_xailient.png)
 
 __Info about xailient sdk installed__
 
 <pre><code>python3.7 -m pip show xailient</code></pre>
 
-![](../img/check_xailient.png)
+![](../img/x86_64/check_xailient.png)
 
 You can get information about the version of xailient sdk installed, support email address, and location of the installation. 
 
@@ -93,34 +93,33 @@ __Activate your license__
 
 In xailient folder of the install location, go to scripts folder and execute xailient-install script
 
-![](../img/scripts_folder.png)
+![](../img/x86_64/scripts_folder.png)
 
 <pre><code>sudo ./xailient-install</code></pre>
 
-![](../img/activate_license.png)
+![](../img/x86_64/activate_license.png)
 
 ## Run sample code
 
 In the xailient folder of the install location, go to samples folder. This folder contains a sample python script named “basic_samples.py” that demonstrates how to use the xailient sdk. 
 
-![](../img/sample_folder.png)
+![](../img/x86_64/sample_folder.png)
 
 The script reads an image named “beatles.jpg” from xailient/data folder, runs the detection sdk on this image and saves output to “beatles_output.jpg” in the same folder.
 
 <pre><code>python3.7 basic_samples.py</code></pre>
 
-![](../img/run_sample_code.png)
+![](../img/x86_64/run_sample_code.png)
 
 Now go to xailient/data folder to see the input and output images.
 
-![](../img/data_folder.png)
+![](../img/x86_64/data_folder.png)
 
 Input Image | Output Image
 :-------------------------:|:-------------------------:
-![](../img/beatles.jpg)   |  ![](../img/beatles_output.jpg)
+![](../img/x86_64/beatles.jpg)   |  ![](../img/x86_64/beatles_output.jpg)
 
 
 ## Uninstall Xailient
 
 <pre><code>python3.7 -m pip uninstall xailient</code></pre>
-

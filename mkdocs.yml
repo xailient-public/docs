@@ -1,7 +1,14 @@
 site_name: Xailient Docs
 nav:
-    - Getting Started: installation.md
+    - Getting Started with Console: console_getting_started.md
+    - Pre-trained AI Models: pre_trained_models.md
+    - Train Your Own AI: custom_models.md
+    - Evaluate your AI: video_inference.md
+    - Deploy Your AI: installation.md
+    - Monitor Your AI: monitor.md
     - Sample Code: sample_code.md
+    - FAQs: faqs.md
+    - Did not find what you are looking for?: support.md
 theme: 
     name: 'material'
     logo: 'img/logo.png'
