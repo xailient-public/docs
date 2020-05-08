@@ -158,6 +158,6 @@ To view the training status of your AI model, navigate to __MANAGE AI MODELS__, 
 
 ## Deploy your AI
 
-When the training is complete, you can download and install the model as an SDK on the targeted device. 
+When the training is complete, you can build an SDK and install it on the targeted device. For more details on how to build an SDK, refer to [Build Deployable SDK](/en/latest/buildSdk/) section of the documentation
 
-For instructions on how to setup your device, install the SDK and run it, please refer to __Deploy AI__ section.
+For instructions on how to setup your device, install the SDK and run it, please refer to [Deploy You AI](/en/latest/installation/) section of the documentation.
