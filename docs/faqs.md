@@ -18,6 +18,13 @@ __Solution:__ Install the correct version of OpenCV contrib.
 $ python3.7 -m pip install opencv-contrib-python==4.1.0.25
 ```
 
+If you still face this issue, add __LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1__ to bash.rc file in the Pi.
+
+```bash
+$ export LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1
+
+```
+
 ### I'm getting _"Dnn.detector not found (AttributeError: module 'dnn' has no attribute 'Detector')"_ error when running hte SDK. What do I do?
 
 You will get this error if you had previously installed the Xailient Face SDK on this device and even when you installed the latest version of the SDK using pip install, the code is still refering back to the older version.
@@ -61,3 +68,9 @@ Use the following command:
 ```bash
 $ sudo apt-get install libjasper-dev libqtgui4 libqt4-test libatlas-base-dev
 ```
+
+### My model training failed.
+
+If you’re model fails training, first thing you want to check the format of the labels file. Sometimes although the labels file passed the the Xailient Console sainity check, it might contain bad invalid data. 
+
+For example, if your xmin column had "???" value in one of the columns, it might pass the sanity check, but the model training will fail.
