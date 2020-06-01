@@ -204,7 +204,8 @@ Input Image | Output Image
 ## Update Xailient SDK Model
 
 ```bash
-(env) $ python3.7 -m pip install "<SDK WHEEL URL>"
+(env) $ python3.7 -m pip uninstall xailient
+(env) $ python3.7 -m pip install "<new SDK WHEEL URL>"
 ```
 
 When you install a new SDK with a different model using pip install, you do not need to run the licence activation script again.

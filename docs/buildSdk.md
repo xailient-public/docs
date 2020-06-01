@@ -2,7 +2,7 @@
 
 1. To build an SDK for your device, go to __MANAGE AI MODELS__ page. 
 
-2. Locate the model you want to build the SDK for and click on __Build SDK__ button <img src="../img/console/BuildSDKIcon.png" height=30> for that model.
+2. Locate the model you want to build the SDK for and click on __Build SDK__ button <img src="../img/console/BuildSDKIcon.png" height=30 width=30> for that model.
 
 3. Choose your targeted platform and click <img src="../img/console/BuildIcon.png" height=30>.
 
