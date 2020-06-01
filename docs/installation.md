@@ -1,7 +1,8 @@
 # Deploy Your AI
 
-*NOTE: This version of the documentation is for installation of Xailient SDK using wheel file (.wh). 
-If you are looking for documentation for installion of Xailient SDK using SDK package, please visit our old [documentation](https://xailient.readthedocs.io/en/latest/installation/).*
+!!! note
+      This version of the documentation is for installation of Xailient SDK using wheel file (.wh). 
+      If you are looking for documentation for installion of Xailient SDK using SDK package, please visit our old [documentation](https://xailient.readthedocs.io/en/latest/installation/).
 
 ## Device Setup
 
@@ -10,6 +11,17 @@ To meet the minimum requirements, your device must be a x86_64 or ARM32 architec
 * Ubuntu 18.04 LTS
 * Ubuntu 19.04
 * Raspbian Buster
+
+!!! note
+
+    To run Xailient SDK on Windows or MacOS, please run it inside a VirtualBox.
+
+    Here are some resources you can refer to to install Ubuntu operating system on a VirtualBox:
+
+    * [Resource 1](https://brb.nci.nih.gov/seqtools/installUbuntu.html)
+    * [Resource 2](https://medium.com/@tushar0618/install-ubuntu-16-04-lts-on-virtual-box-desktop-version-30dc6f1958d0)
+    * [Resource 3](https://itsfoss.com/install-linux-in-virtualbox/)
+
 
 For ARM32, we have tested on the following device:
 
@@ -32,7 +44,8 @@ __Download the package lists and update information__
 $ sudo apt-get update
 ```
 
-*NOTE: apt-get update to download the package lists from the repositories and "update" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.*
+!!! note
+    apt-get update to download the package lists from the repositories and "update" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
 
 __Install python3.7__
 
@@ -88,14 +101,16 @@ To deactivate the virtual environment later,
 
 ## Install XailientSDK
 
-*NOTE: In 18.04 Ubuntu, by default __pip3__ is for python3.6. So we will use __python3.7 -m pip__ command instead to use pip for python3.7.
-If pip3 for your device defaults to python3.7, feel free to replace the command __python3.7 -m pip__ with __pip3__.*
+!!! note
+    In 18.04 Ubuntu, by default __pip3__ is for python3.6. So we will use __python3.7 -m pip__ command instead to use pip for python3.7.
+    If pip3 for your device defaults to python3.7, feel free to replace the command __python3.7 -m pip__ with __pip3__.
 
 __Get SDK Wheel Link__
 
 Go to the Console and navigate to __MANAGE AI MODELS__. For the model you want to deploy, select the SDK you have build for your target platform. 
 
-_[NOTE: If you have not build an SDK yet, refer to __Build SDK__ section of the documentation.]_
+!!! note
+    If you have not build an SDK yet, refer to __Build SDK__ section of the documentation.
 
 Click on the target platform for the model to copy the SDK link.
 
@@ -109,7 +124,8 @@ __Install SDK Wheel__
 (env) $ python3.7 -m pip install "<SDK WHEEL URL>"
 ```
 
-*NOTE: Replace &lt;SDK WHEEL URL&gt; with the SDK link you copied earlier from the console.*
+!!! note
+    Replace &lt;SDK WHEEL URL&gt; with the SDK link you copied earlier from the console.
 
 __Info about xailient sdk installed__
 
@@ -123,7 +139,8 @@ __Info about xailient sdk installed__
 
 You can get information about the version of xailient sdk installed, support email address, and location of the installation. 
 
-_[NOTE: Keep note of the install location “Location” as you will need it in the steps below.]_
+!!! note
+    Keep note of the install location “Location” as you will need it in the steps below.
 
 __Go to Xailient Installation Folder__
 
@@ -214,7 +231,7 @@ When you install a new SDK with a different model using pip install, you do not 
 
 Go to xailient/scripts folder and run the uninstalltion script.
 
-```bash
+``` bash
 (env) $ ../scripts
 (env) $ sudo ./xailient-uninstall
 ```

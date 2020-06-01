@@ -1,6 +1,6 @@
 # Face Detection on Static Image
 
-<pre><code>
+``` python
 from xailient import dnn
 import cv2 as cv
 
@@ -20,4 +20,4 @@ for i in bboxes:
     cv.rectangle(im, (i[0], i[1]), (i[2], i[3]), (0, 255, 0), 3)
     
 cv.imwrite('../data/beatles_output.jpg', im)
-</code></pre>
+```
