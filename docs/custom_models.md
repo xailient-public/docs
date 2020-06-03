@@ -1,5 +1,11 @@
 # Train your own AI Models
 
+<!-- blank line -->
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/o7rsZ6hvxvk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<!-- blank line -->
+
 With Xailient Console, you can train custom AI models, which you can then deploy to your targeted devices.
 
 To train any AI model, you will need training data. 
