@@ -4,7 +4,7 @@
 
 .md-logo img{
     height: 25px;
-    width: auto;
+    width: 100px;
 }
 
 /* Buttons */
@@ -13,8 +13,7 @@
   box-shadow: 0 5px 0 #593696;
   color: white !important;
   padding: 14px 14px;
-  margin: 40px;
-  position: relative;
+  position: center;
   text-decoration: none;
   text-transform: uppercase;
 }

@@ -9,4 +9,13 @@
 <!-- blank line -->
 
 <br>
-<a class="button" href="/en/latest/installation/">Getting Started</a><a class="button" href="/en/latest/sample_code/">Sample Code</a><a class="button" href="https://www.xailient.com/blog">Blogs</a>
+<a class="button" href="/en/latest/installation/">Getting Started</a>
+<br>
+<br>
+<br>
+<a class="button" href="/en/latest/sample_code/">Sample Code</a>
+<br>
+<br>
+<br>
+<a class="button" href="https://www.xailient.com/blog">Blogs</a>
+
