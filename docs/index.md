@@ -8,8 +8,5 @@
 </figure>
 <!-- blank line -->
 
-## [Getting Started](/en/latest/installation/)
-
-## [Sample Code](/en/latest/sample_code/)
-
-## [Blogs](https://www.xailient.com/blog)
+<br>
+<a class="button" href="/en/latest/installation/">Getting Started</a><a class="button" href="/en/latest/sample_code/">Sample Code</a><a class="button" href="https://www.xailient.com/blog">Blogs</a>

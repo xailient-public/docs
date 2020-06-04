@@ -5,3 +5,20 @@
 .md-logo img{
     width: auto;
 }
+
+/* Buttons */
+.button:link, .button:visited {
+  background-color: #7e57c2;
+  box-shadow: 0 5px 0 #593696;
+  color: white !important;
+  padding: 14px 14px;
+  margin: 40px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+button:hover, button:active {
+  background-color: #593696;
+  cursor: pointer;
+}
