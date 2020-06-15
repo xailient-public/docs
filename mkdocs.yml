@@ -10,8 +10,9 @@ nav:
     - Sample Code: sample_code.md
     - FAQs: faqs.md
     - Did not find what you are looking for?: support.md
-theme: 
-    name: 'material'
+theme:
+    name: material
+    custom_dir: overrides
     palette:
       primary: 'deep purple'
       accent: 'deep purple'
