@@ -1,6 +1,6 @@
 # FAQs
 
-### I'm getting _"Connection Failed"_ error when running the SDK. How do I resolve this?
+### 1. I'm getting _"Connection Failed"_ error when running the SDK. How do I resolve this?
 
 Network manager might have restarted, causing Xailient daemon to terminate. 
 
@@ -10,7 +10,7 @@ __Solution:__ Ensure that you are connected to the internet. Manually start the 
 $ sudo systemctl start xailient
 ```
 
-### I'm getting _"undefined symbol: __atomic_fetch_add_8"_ error when running the SDK. What should I do?
+### 2. I'm getting _"undefined symbol: __atomic_fetch_add_8"_ error when running the SDK. What should I do?
 
 __Solution:__ Install the correct version of OpenCV contrib.
 
@@ -25,7 +25,24 @@ $ export LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1
 
 ```
 
-### I'm getting _"Dnn.detector not found (AttributeError: module 'dnn' has no attribute 'Detector')"_ error when running hte SDK. What do I do?
+### 3. I'm getting "ImportError: libcblas.so.3: cannot open shared object file: No such file or directory"
+
+Some of the required libraries maybe missing on your device. 
+
+__Solution:__ Install the following dependencies:
+
+* libjasper-dev 
+* libqtgui4 
+* libqt4-test 
+* libatlas-base-dev
+
+Use the following command:
+
+```bash
+$ sudo apt-get install libjasper-dev libqtgui4 libqt4-test libatlas-base-dev
+```
+
+### 4. I'm getting _"Dnn.detector not found (AttributeError: module 'dnn' has no attribute 'Detector')"_ error when running hte SDK. What do I do?
 
 You will get this error if you had previously installed the Xailient Face SDK on this device and even when you installed the latest version of the SDK using pip install, the code is still refering back to the older version.
 
@@ -54,7 +71,7 @@ To remove the file, use the following command:
 $ sudo rm "[file_path]/dnn.so"
 ```
 
-### I'm facing issues installing OpenCV on Raspberry Pi 3B+.
+### 5. I'm facing issues installing OpenCV on Raspberry Pi 3B+.
 
 __Solution__: Raspberry Pi 3 needs some dependencies if it has a fresh raspbian OS for opencv-python to work. Install the following dependencies:
 
@@ -69,8 +86,22 @@ Use the following command:
 $ sudo apt-get install libjasper-dev libqtgui4 libqt4-test libatlas-base-dev
 ```
 
-### My model training failed.
+### 6. My model training failed.
 
 If you’re model fails training, first thing you want to check the format of the labels file. Sometimes although the labels file passed the the Xailient Console sainity check, it might contain bad invalid data. 
 
 For example, if your xmin column had "???" value in one of the columns, it might pass the sanity check, but the model training will fail.
+
+### 7. I'm getting "ImportError: libboost_python-py37.so.1.62.0: cannot open shared object file: No such file or directory"
+
+When activating the xailient license using command sudo ./xailient-install, you should have received a confirmation message asking where xailient-agent can copy the compiled Boost library files for you. If you typed in "yes" then there is no need to do it manually. 
+If not, then you will have to setup it up manually.
+
+__Solution__: To copy the Boost library files and update ldconfig, go to xailient installation folder and use the following command:
+
+``` bash
+sudo cp -r sharedLib /usr/lib/xailient
+sudo sh -c "echo '/usr/lib/xailient' > /etc/ld.so.conf.d/xailient.conf"
+sudo chmod +x /usr/lib/xailient/*
+sudo ldconfig
+```
