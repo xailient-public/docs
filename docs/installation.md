@@ -6,7 +6,7 @@
 
 ## Device Setup
 
-To meet the minimum requirements, your device must be a x86_64 or ARM32 architecture device. We’ve tested the following operating systems:
+To meet the minimum requirements, your device must be a x86_64 or ARM32 architecture device. We've tested the following operating systems:
 
 * Ubuntu 18.04 LTS
 * Ubuntu 19.04
@@ -87,7 +87,7 @@ $ python3 -m venv env
 
 Activate the virtual environment.
 
-Before you can start using the virtual environment for package installations, you will need to activate it. Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.
+Before you can start using the virtual environment for package installations, you will need to activate it. Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell's PATH.
 
 ```bash
 $ source env/bin/activate
@@ -112,20 +112,31 @@ Go to the Console and navigate to __MANAGE AI MODELS__. For the model you want t
 !!! note
     If you have not build an SDK yet, refer to __Build SDK__ section of the documentation.
 
-Click on the target platform for the model to copy the SDK link.
+Click on the target platform for the model to download and copy the SDK link.
 
 <p align="center">
   <img src="../img/console/CopySDKLink.png">
 </p>
 
+!!! note
+    When you click the button &lt;ARM32&gt; or &lt;x86_64&gt;, it downloads the SDK wheel file as well as copies the link to the wheel file in your clipboard.
+
 __Install SDK Wheel__
 
+##### Install using downloaded SDK wheel file
+
 ```bash
-(env) $ python3.7 -m pip install "<SDK WHEEL URL>"
+(env) $ python3.7 -m pip install <download_path/wheel_file_name>
+```
+
+##### Install using SDK link
+
+```bash
+(env) $ python3.7 -m pip install "<SDK WHEEL LINKs>"
 ```
 
 !!! note
-    Replace &lt;SDK WHEEL URL&gt; with the SDK link you copied earlier from the console.
+    Replace &lt;SDK WHEEL LINK&gt; with the SDK link you copied earlier from the console.
 
 __Info about xailient sdk installed__
 
@@ -133,18 +144,14 @@ __Info about xailient sdk installed__
 (env) $ python3.7 -m pip show xailient
 ```
 
-<p align="center">
-  <img src="../img/x86_64/check_xailient.png">
-</p>
-
 You can get information about the version of xailient sdk installed, support email address, and location of the installation. 
 
 !!! note
-    Keep note of the install location “Location” as you will need it in the steps below.
+    Keep note of the install location "Location" as you will need it in the steps below.
 
 __Go to Xailient Installation Folder__
 
-To go to xailient folder, use the following command. If you do not know the install location, please refer to __“Info about xailient sdk installed”__ section above.
+To go to xailient folder, use the following command. If you do not know the install location, please refer to __"Info about xailient sdk installed"__ section above.
 
 ```bash
 (env) $ cd <Xailient Install Location>/xailient
@@ -182,9 +189,9 @@ Go to __scripts__ folder and execute xailient-install script
 
 ## Run sample code
 
-In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named “basic_samples.py” that demonstrates how to use the xailient sdk. 
+In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named "basic_samples.py" that demonstrates how to use the xailient sdk. 
 
-The script reads an image named “beatles.jpg” from __data__ folder, runs the detection sdk on this image and saves output to “beatles_output.jpg” in the same folder.
+The script reads an image named "beatles.jpg" from __data__ folder, runs the detection sdk on this image and saves output to "beatles_output.jpg" in the same folder.
 
 Before we can run this script, we need to ensure that we give the OPTIMAL THRESHOLD.
 
@@ -210,8 +217,6 @@ Now run the sample script.
 ```
 
 Now go to __data__ folder to see the input and output images.
-
-![](../img/x86_64/data_folder.png)
 
 Input Image | Output Image
 :-------------------------:|:-------------------------:
