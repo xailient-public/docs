@@ -66,11 +66,14 @@ from picamera import PiCamera
 import time
 import cv2 as cv
 import math
-import dnn
+from xailient import dnn
 import numpy as np
 
-detectum = dnn.FaceDetector()
-THRESHOLD = 0.8
+#By default Low resolution DNN for face detector will be loaded.
+#To load the high resolution Face detector please comment the below lines.
+detectum = dnn.Detector()
+
+THRESHOLD = 0.45 # Value between 0 and 1 for confidence score
 
 # initialize the camera and grab a reference to the raw camera capture
 RES_W = 640 # 1280 # 640 # 256 # 320 # 480 # pixels
