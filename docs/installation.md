@@ -189,7 +189,7 @@ Go to __scripts__ folder and execute xailient-install script
 
 ## Run sample code
 
-In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named "basic_samples.py" that demonstrates how to use the xailient sdk. 
+In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named "basic_sample.py" that demonstrates how to use the xailient sdk. 
 
 The script reads an image named "beatles.jpg" from __data__ folder, runs the detection sdk on this image and saves output to "beatles_output.jpg" in the same folder.
 
@@ -202,7 +202,7 @@ Scroll down to __Evaluation Results__ where you can find __BEST THRESHOLD__.
   <img src="../img/console/Evaluation_thresh.png">
 </p>
 
-Then using a text editor of your choice, edit the basic_samples.py script to include the value for __BEST THRESHOLD__ as found above.
+Then using a text editor of your choice, edit the basic_sample.py script to include the value for __BEST THRESHOLD__ as found above.
 
 <p align="center">
   <img src="../img/console/best_thresh.png">
@@ -213,7 +213,7 @@ Now run the sample script.
 
 ```bash
 (env) $ cd ../samples
-(env) $ python3.7 basic_samples.py
+(env) $ python3.7 basic_sample.py
 ```
 
 Now go to __data__ folder to see the input and output images.
