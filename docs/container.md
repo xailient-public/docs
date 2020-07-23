@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../img/docker_xailient.png">
+  <img src="../img/container/docker_xailient.png">
 </p>
 <br>
 We also offer Docker Containers as an option to deploy your trained models from your desktop.
@@ -27,6 +27,10 @@ If successful run `$ docker images` and check if the image "xailent/model-infere
 ## Starting a Xailient SDK instance
 ### Setup
 On your local machine create a directory called "test" and then create two further subdirectories called "input" and "output". 
+
+<p align="center">
+  <img src="../img/container/test.png">
+</p>
 
 Place any images you want to run inference on in the subdirectory called "input".
 The "test" directory will be mounted into your Container when you run it. 
