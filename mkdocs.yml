@@ -5,7 +5,9 @@ nav:
     - Train Your Own AI: custom_models.md
     - Evaluate your AI: video_inference.md
     - Build Deployable SDK: buildSdk.md
-    - Deploy Your AI: installation.md
+    - Deploy Your AI: 
+        - Native Installation: installation.md
+        - Docker container: container.md
     - Monitor Your AI: monitor.md
     - Sample Code: sample_code.md
     - FAQs: faqs.md
