@@ -16,7 +16,7 @@ This python script allows developers to either:
 `$ python3 video_2_frames --every <integer> <path_to_video>`
 
 **Checkout this Github Repository for the most updated version:**
-[https://github.com/XailientPublic/example_scripts](https://github.com/XailientPublic/example_scripts)
+[https://github.com/XailientPublic/free_tools](https://github.com/XailientPublic/free_tools)
 
 
 ``` python3
