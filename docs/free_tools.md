@@ -1,6 +1,12 @@
 # Free tools for developers
 
+**Checkout this Github Repository for the most updated versions:**
+[https://github.com/XailientPublic/free_tools](https://github.com/XailientPublic/free_tools)
+
+
 ## Split a video into frames for training data
+
+File: [video_2_frames.py](https://github.com/XailientPublic/free_tools/blob/master/video_2_frames.py)
 
 This tool allows developers to quickly split a video into frames,
 with the aim in create training data for model production.
@@ -15,87 +21,29 @@ This python script allows developers to either:
 
 `$ python3 video_2_frames --every <integer> <path_to_video>`
 
-**Checkout this Github Repository for the most updated version:**
-[https://github.com/XailientPublic/free_tools](https://github.com/XailientPublic/free_tools)
 
+## Converion of different annotation formats
 
-``` python3
-import cv2 as cv
-import argparse
-from pathlib import Path
+File: [convert.py](https://github.com/XailientPublic/free_tools/blob/master/convert.py)
 
-# Argument parsing
-parser = argparse.ArgumentParser()
-parser.add_argument('path_to_video', type=str, nargs=1,
-                    help='Path to the video you want to split')
-parser.add_argument('--every', type=int, nargs=1,
-                    help='Save every ith frame')
+A script to convert different annotations formats to the format required by the Xailient Console.
 
-args = parser.parse_args()
-video_path = Path(args.path_to_video[0])
-video_name = video_path.stem
+Currently supported formats for this conversion script are pascalvoc/labelimg, labelme, coco, and yolo formats.
 
-if args.every:
-    every_ith_frame = args.every[0]
+Choices for input_format argument are 'voc', 'coco', 'labelme', 'yolo'
 
-    if every_ith_frame < 1:
-        print('Usage Error: --every takes an integer > 0')
-        exit(1)
+- For annotations present in a single file (e.g. COCO), input_path represents the path to the JSON file. 
 
-else:
-    every_ith_frame = 'None'
+- While for separate annotations for each image (e.g. Pascal VOC, yolo, labelme), input_path represents
+the path to the folder where the annotations reside.
 
-# Setup
-output_path = Path.cwd()
-output_path = output_path / video_name
-try:
-    output_path.mkdir()
-except FileExistsError:
-    print('Error: Directory ' + video_name + ' already exists in current directory')
-    exit(1)
-print('Created a new directory called ' + str(video_name) + ' in the current directory')
+The output_path is the path and name of the converted xailient annotations.
 
-# Instructions
-if every_ith_frame is 'None':
-    print('''You are manually choosing the frames to save.
-    Press q to exit
-    Press s to save a frame
-    Press any other key to see next frame
-    
-If you would like to save every ith frame instead run:
-python3 video_2_frames --every <integer> <path_to_video>
-''')
+Examples of usage:
 
-# Video Processing
-cap = cv.VideoCapture(str(video_path))
+`$ python3 convert.py --input_path example/coco_annotations.json --input_format coco --output_path example/xailient_labels.csv`
 
-i = 0
-while True:
-
-    i += 1
-
-    ret_val, next_frame = cap.read() # Reads the next video frame into memory
-
-    if ret_val is False:
-        break
-
-    if every_ith_frame is not 'None':
-        if i % every_ith_frame is 0:
-            image_name = 'frame_' + str(i) + '.jpg'
-            cv.imwrite(str(output_path / image_name), next_frame)
-        continue
-
-    cv.imshow('frame'+str(i),next_frame)
-
-    key = cv.waitKey(0)
-    if key == 113: # Hit q key to exit
-        break
-    elif key == 115: # Hit s key to save
-        image_name = 'frame_' + str(i) + '.jpg'
-        cv.imwrite(str(output_path / image_name), next_frame)
-    else:
-        pass
-
-    cv.destroyAllWindows()
-cap.release()
-```
+<br>
+<br>
+<br>
+<br>
