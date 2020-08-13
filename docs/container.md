@@ -65,14 +65,14 @@ A link will be copied to your clipboard. If a download occurs you can ignore or 
 <br>
 Finally run,
 
-`$ docker run -e SDK_LINK='<LINK>' -v <test_path>:/app/volume xailient/model-inference`
+`$ docker run -e SDK_LINK="<LINK>" -v <test_path>:/app/volume xailient/model-inference`
 
 - Replace `<LINK>` with the SDK link obtained earlier. Here you are passing the link to the container as an environment variable.
 - Replace `<TEST_PATH>` with the **full path** to the directory named "test", which we created earlier. Here we are mounting a local directory to the Container as a volume. In other words, giving the Container access to a directory on our local machine.
 
 **Example:**
 
-`$ docker run -e SDK_LINK='https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx' -v /Users/Bernie/Desktop/test:/app/volume xailient/model-inference`
+`$ docker run -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v /Users/Bernie/Desktop/test:/app/volume xailient/model-inference`
 
 All predictions will appear in the "output" subdirectory.
 
@@ -83,11 +83,11 @@ All predictions will appear in the "output" subdirectory.
 Play around with different thresholds by passing in the environment variable THRESHOLD when running the container instance. E.g.
 
 **Example:**
-`$ docker run -e THRESHOLD='0.8' -e SDK_LINK='<LINK>' -v <test_path>:/app/volume xailient/model-inference`
+`$ docker run -e THRESHOLD='0.8' -e SDK_LINK="<LINK>" -v <test_path>:/app/volume xailient/model-inference`
 
 ### Output bounding box coordinates
 You can also output textfile called log_output.txt which lists the bouding box coordinates of each prediction for an image.
 Achieve this by passing the boolean environment variable LOG.
 
 **Example:**
-`$ docker run -e LOG='True' -e SDK_LINK='<LINK>' -v <test_path>:/app/volume xailient/model-inference`
+`$ docker run -e LOG='True' -e SDK_LINK="<LINK>" -v <test_path>:/app/volume xailient/model-inference`
