@@ -2,6 +2,10 @@
   <img src="../img/container/docker_xailient.png">
 </p>
 <br>
+
+# Currently under development
+
+<!---
 We also offer Docker Containers as an option to deploy your trained models from your desktop.
 This option is currently in beta but is a great way to test the Xailient SDK without worrying about the installation process or the requirements of your machine.
 
@@ -90,4 +94,4 @@ You can also output textfile called log_output.txt which lists the bouding box c
 Achieve this by passing the boolean environment variable LOG.
 
 **Example:**
-`$ docker run -e LOG='True' -e SDK_LINK="<LINK>" -v <test_path>:/app/volume xailient/model-inference`
+`$ docker run -e LOG='True' -e SDK_LINK="<LINK>" -v <test_path>:/app/volume xailient/model-inference`-->
