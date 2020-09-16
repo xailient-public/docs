@@ -1,8 +1,10 @@
 # Deploy Your AI
 
 !!! note
-      This version of the documentation is for installation of Xailient SDK using wheel file (.wh). 
+      This version of the documentation is for installation of Xailient SDK using wheel file (.whl). 
       If you are looking for documentation for installion of Xailient SDK using SDK package, please visit our old [documentation](https://xailient.readthedocs.io/en/latest/installation/).
+      
+      If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container/).
 
 ## Device Setup
 

@@ -7,7 +7,7 @@ nav:
     - Build Deployable SDK: buildSdk.md
     - Deploy Your AI: 
         - Native Installation: installation.md
-        - Docker container: container.md
+        - Docker Container: container.md
     - Monitor Your AI: monitor.md
     - Sample Code: sample_code.md
     - Free Tools: free_tools.md
