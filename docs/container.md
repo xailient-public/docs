@@ -4,14 +4,14 @@
 <br>
 
 We also offer Docker Containers as an option to deploy your trained models from your desktop.
-This option is a great way to test the Xailient SDK without worrying about the installation process or the requirements of your machine.
+This option is a great way to test the Xailient SDK without worrying about the installation process or the requirements of your device.
 
-We recommend this option for users who don't meet the requirements for native installation however are able to run the Docker application.
+We recommend this option for users who don't have access to an IoT device or Linux VM, or that simply want to be able to use a Xailient SDK from their Mac or Windows computers.
 
-The latest version of our container enables users to **batch process images and videos** using their own custom trained model.
+The latest version (1.0.1) of our container enables users to **batch process images and videos** using their own custom trained model.
 
 ## Download Docker
-New to Docker and containerisation?
+New to Docker and containerization?
 
 * [Download Docker Desktop](https://www.docker.com/products/docker-desktop)
 * [Find out more about container technology](https://www.docker.com/resources/what-container)
@@ -37,15 +37,15 @@ You can either:
 1. Train a custom model
 2. Use a pretrained model
 
-To achieve this follow the steps at [Training a model](custom_models.md)
+To achieve this follow the steps at [Training a model](custom_models.md).
 
-Next you will need to [Build Deployable SDK](buildSdk.md) and choose the **X86-64** option
+Next you will need to [Build Deployable SDK](buildSdk.md) and choose the **X86-64** option.
 
 <br>
 ### Running the container
-First step here is to copy an SDK_LINK or download the SDK wheel file (.whl) from the training console.
+First step here is to copy the SDK download link or download the SDK wheel file (.whl) from the training console.
 
-Go to __MANAGE AI MODELS__ page and locate the model for which you have build the SDK.
+Go to __MANAGE AI MODELS__ page and locate the model for which you have built the SDK.
 
 Click on __Download/Copy SDK__ button for that model. 
 
@@ -58,17 +58,18 @@ A link will be copied to your clipboard and a download will begin.
 <br>
 To run the container either,
 
-A. Pass the SDK_LINK you copied earlier as an environment variable.
+A. Pass the SDK download link you copied earlier as an `SDK_LINK` environment variable on the docker command line:
 
   `$ docker run -e SDK_LINK="<LINK>" -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-B. Place the downloaded SDK wheel file into the "input" directory instead of using the link.
+B. OR, place the downloaded SDK wheel file into the "input" directory instead of using the link:
 
 `$ docker run -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
 **Note:**
 
 - Replace `<LINK>` with the SDK link obtained earlier. Here you are passing the link to the container as an environment variable.
+Be sure to include double quotes around the SDK download link since the link may contain characters like `&` that can cause problems if not quoted.
 - Replace `<FULL_PATH>` with the **full path** to the directories "input" and "output", which we created earlier. Here we are mounting local directories to the Container as a volume. In other words, giving the Container access to a directory on the local machine.
 - Providing an SDK_LINK takes precedence over placing the SDK wheel file in the "input" directory. Therefore, be aware when swapping in different models.
 
@@ -76,7 +77,7 @@ B. Place the downloaded SDK wheel file into the "input" directory instead of usi
 
 `$ docker run -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v ~/Desktop/input:/input -v ~/Workspace/output:/output xailient/model-inference:1.0.1`
 
-All predictions will appear in the "output" directory.
+All predictions will appear in the "output" directory (the `~/Workspace/output` directory of the host OS in this example).
 
 <br>
 ## Default Behaviour
@@ -85,7 +86,7 @@ Placing the following in the "input" directory:
 
 - SDK wheel file: xailient-1.0.4-py3-none-linux_x86_64.whl
 - An image called car.jpeg
-- A video of called traffic.mp4
+- A video called traffic.mp4
 
 and running 
 `$ docker run -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
@@ -131,3 +132,8 @@ Achieve this by setting the boolean environment variable LOG to False.
 **Example:**
 `$ docker run -e LOG=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
+# Releases
+
+`1.0.1`
+
+Enables users to batch process images and videos using their own custom trained model.
