@@ -98,36 +98,47 @@ You will find in the output directory:
 - Further images with bounding boxes which correspond to the frames from the video file traffic.mp4
 
 <br>
-## Further options
-### Thresholding
-Play around with different thresholds by passing in the environment variable THRESHOLD when running the Container instance. E.g.
+## Supported options
+
+### THRESHOLD (default=0.5)
+Play around with different confidence thresholds by passing in the environment variable THRESHOLD when running the Container instance. E.g.
 
 **Example:**
 `$ docker run -e THRESHOLD='0.8' -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### Perform inference on every ith frame of all given videos
+### IMAGES (default=True)
+Controls whether images with predicted bounding boxes are created in the output directory.
+To disable this set the environment variable IMAGES to False.
+
+**Example:**
+`$ docker run -e IMAGES=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
+
+### REBUILD (default=True)
+Reconstruct videos with bounding boxes on each frame.
+You can output the original videos with bounding boxes drawn on each frame with the environment variable REBUILD. You can also pass another variable FPS to set the framerate, default is 2.
+
+This functionality can be combined with choosing the ith frame to do inference with the EVERY option.
+
+**Example:**
+`$ docker run -e EVERY=20 -e REBUILD=True -e FPS=10 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
+
+### EVERY (default=1)
+Perform inference on every ith frame of all given videos.
 As an example, you could perform inference on every 20th frame in a video with the environment variable EVERY.
 
 **Example:**
 `$ docker run -e EVERY=20 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### Reconstruct videos with bounding boxes on each frame.
-You can output the original videos with bounding boxes drawn on each frame with the environment variable REBUILD. You can also pass another variable FPS to set the framerate, default is 2.
-
-This functionality can be combined with choosing the ith frame to do inference with the EVERY option above.
-
-**Example:**
-`$ docker run -e EVERY=20 -e REBUILD=True -e FPS=10 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
-
-### Disable output of all images
-Achieve this by setting the boolean environment variable IMAGES to False.
-Note that this will also disable the REBUILD option for videos.
+### FPS (default=2)
+The reconstructed video will have this many frames per second.
+As an example, you can create an output video at 30 FPS with the environment variable FPS.
 
 **Example:**
-`$ docker run -e IMAGES=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
+`$ docker run -e FPS=30 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### Disable predictions.csv output
-Achieve this by setting the boolean environment variable LOG to False.
+### LOG (default=True)
+Controls whether a .csv file with bounding boxes for all predicted images is created in the output directory.
+To disable this set the environment variable LOG to False.
 
 **Example:**
 `$ docker run -e LOG=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
