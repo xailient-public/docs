@@ -232,7 +232,7 @@ Input Image | Output Image
 (env) $ python3.7 -m pip install "<new SDK WHEEL URL>"
 ```
 
-When you install a new SDK with a different model using pip install, you do not need to run the licence activation script again.
+When you install a new SDK with a different model using pip install, you do not need to run the license activation script again.
 
 ## Uninstall Xailient
 
