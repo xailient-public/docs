@@ -4,14 +4,14 @@
 <br>
 
 We also offer Docker Containers as an option to deploy your trained models from your desktop.
-This option is a great way to test the Xailient SDK without worrying about the installation process or the requirements of your machine.
+This option is a great way to test the Xailient SDK without worrying about the installation process or the requirements of your device.
 
-We recommend this option for users who don't meet the requirements for native installation however are able to run the Docker application.
+We recommend this option for users who don't have access to an IoT device or Linux VM, or that simply want to be able to use a Xailient SDK from their Mac or Windows computers.
 
-The latest version of our container enables users to **batch process images and videos** using their own custom trained model.
+The latest version (1.0.1) of our container enables users to **batch process images and videos** using their own custom trained model.
 
 ## Download Docker
-New to Docker and containerisation?
+New to Docker and containerization?
 
 * [Download Docker Desktop](https://www.docker.com/products/docker-desktop)
 * [Find out more about container technology](https://www.docker.com/resources/what-container)
@@ -37,15 +37,15 @@ You can either:
 1. Train a custom model
 2. Use a pretrained model
 
-To achieve this follow the steps at [Training a model](custom_models.md)
+To achieve this follow the steps at [Training a model](custom_models.md).
 
-Next you will need to [Build Deployable SDK](buildSdk.md) and choose the **X86-64** option
+Next you will need to [Build Deployable SDK](buildSdk.md) and choose the **X86-64** option.
 
 <br>
 ### Running the container
-First step here is to copy an SDK_LINK or download the SDK wheel file (.whl) from the training console.
+First step here is to copy the SDK download link or download the SDK wheel file (.whl) from the training console.
 
-Go to __MANAGE AI MODELS__ page and locate the model for which you have build the SDK.
+Go to __MANAGE AI MODELS__ page and locate the model for which you have built the SDK.
 
 Click on __Download/Copy SDK__ button for that model. 
 
@@ -58,17 +58,18 @@ A link will be copied to your clipboard and a download will begin.
 <br>
 To run the container either,
 
-A. Pass the SDK_LINK you copied earlier as an environment variable.
+A. Pass the SDK download link you copied earlier as an `SDK_LINK` environment variable on the docker command line:
 
   `$ docker run -e SDK_LINK="<LINK>" -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-B. Place the downloaded SDK wheel file into the "input" directory instead of using the link.
+B. OR, place the downloaded SDK wheel file into the "input" directory instead of using the link:
 
 `$ docker run -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
 **Note:**
 
 - Replace `<LINK>` with the SDK link obtained earlier. Here you are passing the link to the container as an environment variable.
+Be sure to include double quotes around the SDK download link since the link may contain characters like `&` that can cause problems if not quoted.
 - Replace `<FULL_PATH>` with the **full path** to the directories "input" and "output", which we created earlier. Here we are mounting local directories to the Container as a volume. In other words, giving the Container access to a directory on the local machine.
 - Providing an SDK_LINK takes precedence over placing the SDK wheel file in the "input" directory. Therefore, be aware when swapping in different models.
 
@@ -76,7 +77,7 @@ B. Place the downloaded SDK wheel file into the "input" directory instead of usi
 
 `$ docker run -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v ~/Desktop/input:/input -v ~/Workspace/output:/output xailient/model-inference:1.0.1`
 
-All predictions will appear in the "output" directory.
+All predictions will appear in the "output" directory (the `~/Workspace/output` directory of the host OS in this example).
 
 <br>
 ## Default Behaviour
@@ -85,7 +86,7 @@ Placing the following in the "input" directory:
 
 - SDK wheel file: xailient-1.0.4-py3-none-linux_x86_64.whl
 - An image called car.jpeg
-- A video of called traffic.mp4
+- A video called traffic.mp4
 
 and running 
 `$ docker run -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
@@ -97,37 +98,53 @@ You will find in the output directory:
 - Further images with bounding boxes which correspond to the frames from the video file traffic.mp4
 
 <br>
-## Further options
-### Thresholding
-Play around with different thresholds by passing in the environment variable THRESHOLD when running the Container instance. E.g.
+## Supported options
+
+### THRESHOLD (default=0.5)
+Play around with different confidence thresholds by passing in the environment variable THRESHOLD when running the Container instance. E.g.
 
 **Example:**
 `$ docker run -e THRESHOLD='0.8' -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### Perform inference on every ith frame of all given videos
+### IMAGES (default=True)
+Controls whether images with predicted bounding boxes are created in the output directory.
+To disable this set the environment variable IMAGES to False.
+
+**Example:**
+`$ docker run -e IMAGES=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
+
+### REBUILD (default=True)
+Reconstruct videos with bounding boxes on each frame.
+You can output the original videos with bounding boxes drawn on each frame with the environment variable REBUILD. You can also pass another variable FPS to set the framerate, default is 2.
+
+This functionality can be combined with choosing the ith frame to do inference with the EVERY option.
+
+**Example:**
+`$ docker run -e EVERY=20 -e REBUILD=True -e FPS=10 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
+
+### EVERY (default=1)
+Perform inference on every ith frame of all given videos.
 As an example, you could perform inference on every 20th frame in a video with the environment variable EVERY.
 
 **Example:**
 `$ docker run -e EVERY=20 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### Reconstruct videos with bounding boxes on each frame.
-You can output the original videos with bounding boxes drawn on each frame with the environment variable REBUILD. You can also pass another variable FPS to set the framerate, default is 2.
-
-This functionality can be combined with choosing the ith frame to do inference with the EVERY option above.
-
-**Example:**
-`$ docker run -e EVERY=20 -e REBUILD=True -e FPS=10 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
-
-### Disable output of all images
-Achieve this by setting the boolean environment variable IMAGES to False.
-Note that this will also disable the REBUILD option for videos.
+### FPS (default=2)
+The reconstructed video will have this many frames per second.
+As an example, you can create an output video at 30 FPS with the environment variable FPS.
 
 **Example:**
-`$ docker run -e IMAGES=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
+`$ docker run -e FPS=30 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### Disable predictions.csv output
-Achieve this by setting the boolean environment variable LOG to False.
+### LOG (default=True)
+Controls whether a .csv file with bounding boxes for all predicted images is created in the output directory.
+To disable this set the environment variable LOG to False.
 
 **Example:**
 `$ docker run -e LOG=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
+# Releases
+
+`1.0.1`
+
+Enables users to batch process images and videos using their own custom trained model.
