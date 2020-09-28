@@ -9,6 +9,7 @@ nav:
         - Native Installation: installation.md
         - Docker Container: container.md
     - Monitor Your AI: monitor.md
+    - API Documentation: xailient_sdk_api.md 
     - Sample Code: sample_code.md
     - Free Tools: free_tools.md
     - Tutorials: 
