@@ -3,8 +3,9 @@
 </p>
 <br>
 
-While the Xailient SDK is designed to provide state of the art performance on low power IoT devices
-we also offer a Docker container as an option to deploy your trained models from your desktop.
+While the Xailient SDK is designed to provide state of the art machine vision performance efficient enough to run on
+low power IoT devices using technology inspired by human biology, we also offer a Docker container as an option to
+deploy your trained models from your desktop.
 This option is a great way to see the Xailient SDK in action using a desktop OS like Mac or Windows.
 
 We recommend this option for users who don't have access to an IoT device or Linux VM, or that simply want to be able to use a Xailient SDK from their Mac or Windows computers.
