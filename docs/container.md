@@ -51,7 +51,7 @@ A link will be copied to your clipboard and a download will begin.
 <br>
 ## Run the Xailient SDK Container
 
-  `$ docker run -e SDK_LINK="<LINK>" -v <INPUT_IMAGES_DIR>:/input -v <OUTPUT_IMAGES_DIR>:/output xailient/model-inference:1.0.1`
+    `$ docker run -e SDK_LINK="<LINK>" -v <INPUT_IMAGES_DIR>:/input -v <OUTPUT_IMAGES_DIR>:/output xailient/model-inference:1.0.1`
 
 Replace `<LINK>` with the SDK link obtained earlier. Here you are passing the link to the container as an environment variable.
 Be sure to include __double quotes around the SDK download link__ since the link may contain characters like `&` that can cause problems if not quoted.
@@ -62,8 +62,8 @@ run through the Xailient SDK.
 Replace `<OUTPUT_IMAGES_DIR>` with the __full path__ to a directory where the images and videos with their predicted bounding
 boxes drawn will be placed.
 
-Note: You can also place the downloaded Xailient SDK (a python .whl file) into the "<INPUT_IMAGES_DIR>" directory of the host OS.
- Then you can start the docker container without specifying the Xailient SDK's URL via `-e SDK_LINK="<LINK>"`
+Note: You can also place the downloaded Xailient SDK (a python .whl file) into the `<INPUT_IMAGES_DIR> ` directory of the host OS.
+ Then you can start the docker container without specifying the Xailient SDK's URL via `-e SDK_LINK="<LINK>"` e.g.
 
     `$ docker run -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
@@ -71,14 +71,17 @@ Providing an `SDK_LINK` takes precedence over placing the Xailient SDK file in t
 
 **Example:**
 
-`$ docker run -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v ~/Desktop/input:/input -v ~/Workspace/output:/output xailient/model-inference:1.0.1`
+    `$ docker run -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v ~/Desktop/input:/input -v ~/Workspace/output:/output xailient/model-inference:1.0.1`
 
-All predicted images and videos will appear in the `~/Workspace/output` of the host OS.
+In this example, all predicted images and videos will appear in the `~/Workspace/output` of the host OS.
 
 <br>
 ## Default Behaviour
 
-By default the Xailient SDK container will output images for all given input images, and output videos for all given input videos.
+By default the Xailient SDK container will output images for all given input images, and output videos and their frames for all given input videos.
+
+* Supported Image formats: jpeg/jpg, png
+* Supported Video formats: mp4, avi, flv, mkv, mov, webm, wmv
 
 It will also create a csv file named "predictions.csv" with rows corresponding to the bounding box coordinates for each image.
 
@@ -89,7 +92,7 @@ gets passed to the `docker run` command. See below for examples of how to use th
 ## Supported Options
 
 ### IMAGES (default=True)
-Controls whether images with predicted bounding boxes are created in the output directory for input images.
+Controls whether images with predicted bounding boxes are created in the output directory for input images. Also controls whether individual video frames appear with bounding boxes.
 To disable this set the environment variable IMAGES to False.
 
 **Example:**
@@ -99,13 +102,8 @@ To disable this set the environment variable IMAGES to False.
 Controls whether videos with predicted bounding boxes are created in the output directory for input videos.
 See the `FPS` and `EVERY` option for even more control over the output video that gets created.
 
-If `REBUILD` is False then one output image is created for each frame of the video. The output image names will be the same
-name as the video file, with a `_1`, `_2`, etc appended. 
-So an input video named `FrontDoor-Oct-14-2020.mp4` will cause output images named `FrontDoor-Oct-14-2020_1.jpg`,
-`FrontDoor-Oct-14-2020_2.jpg`, etc to be created in the output directory.
-
 **Example:**
-`$ docker run -e EVERY=20 -e REBUILD=True -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
+`$ docker run -e REBUILD=True -e EVERY=20  -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
 ### EVERY (default=1)
 Perform inference on every ith frame of all given videos.
@@ -113,14 +111,14 @@ Perform inference on every ith frame of all given videos.
 **Example:**
 `$ docker run -e EVERY=20 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### FPS
+### FPS (defaults to the original video fps)
 Reconstructed videos will have this many frames per second.
 
 **Example:**
 `$ docker run -e FPS=30 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
 ### THRESHOLD (default=0.5)
-Play around with different confidence thresholds by passing in the environment variable THRESHOLD when running the Container instance.
+Play around with different confidence thresholds by passing in the environment variable THRESHOLD when running the Container instance. Accepts floating values from 0 to 1.
 
 **Example:**
 `$ docker run -e THRESHOLD='0.8' -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
@@ -132,8 +130,15 @@ To disable this set the environment variable LOG to False.
 **Example:**
 `$ docker run -e LOG=False -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-# Releases
+<br>
+## Releases
 
 `1.0.1`
 
 Enables users to batch process images and videos using their own custom trained model.
+
+<br>
+## Common Problems
+1. Check that you have used the fullpath to your input and output directories. The Container will still run if you use relative paths however will not work as intended. I.e. Video/image inferencing will **not** work.
+2. Check that you have used double quotations " " around the SDK_LINK. Since the link may contain characters like `&` that can cause problems if not quoted.
+
