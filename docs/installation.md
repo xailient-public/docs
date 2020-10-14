@@ -34,8 +34,6 @@ __Minimum software requirements:__
 * Glibc 2.27
 * Python >=3.6
 * Pip
-* OpenCV
-* Curl
 * VirtualEnv
 
 If your device does not meet the minimum software required, please follow the instructions below to install them.
@@ -62,18 +60,6 @@ __Install pip for python3__
 
 ```bash
 $ sudo apt-get install python3-pip
-```
-
-__Install OpenCV__
-
-```bash
-$ sudo apt-get install python-opencv
-```
-
-__Install Curl__
-
-```bash
-$ sudo apt-get install curl
 ```
 
 __Install VirtualEnv__
@@ -176,15 +162,14 @@ __Activate your license__
 Go to __scripts__ folder and execute xailient-install script
 
 ```bash
-(env) $ cd scripts
-(env) $ sudo ./xailient-install
+(env) $ python3 -m xailient.install
 ```
 
 ## Run sample code
 
 In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named "basic_sample.py" that demonstrates how to use the xailient sdk. 
 
-The script reads an image named "beatles.jpg" from __data__ folder, runs the detection sdk on this image and saves output to "beatles_output.jpg" in the same folder.
+The script reads an image named "beatles.jpg" from __data__ folder, runs the detection sdk on this image and saves output to "beatles_output.jpg" in the current working directory.
 
 Now run the sample script.
 
@@ -213,8 +198,7 @@ When you install a new SDK with a different model using pip install, you do not 
 Go to xailient/scripts folder and run the uninstalltion script.
 
 ``` bash
-(env) $ ../scripts
-(env) $ sudo ./xailient-uninstall
+(env) $ python3 -m xailient.install
 ```
 
 Pip uninstall xailient
@@ -222,9 +206,6 @@ Pip uninstall xailient
 ```bash
 (env) $ python3 -m pip uninstall xailient
 ```
-
-Keep in mind that after uninstall, the data folder and sample folder will remain.
-When you install a new SDK with a different model, these folders will be reintegrated into the SDK. This allows users to easily move data and scripts across different SDKs.
 
 Note that any changes to the basic_sample.py python script will be overwritten so keep a backup if you intend to keep any changes.
 
