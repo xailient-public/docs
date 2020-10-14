@@ -117,7 +117,10 @@ Reconstructed videos will have this many frames per second.
 **Example:**
 `$ docker run -e FPS=30 -v <FULL_PATH>:/input -v <FULL_PATH>:/output xailient/model-inference:1.0.1`
 
-### THRESHOLD (default=0.5)
+### THRESHOLD (default=Optimal)
+Optimal threshold determined during training and built into the SDK Model.
+Note for SDK model version 1.0.4 the default is 0.25.
+
 Play around with different confidence thresholds by passing in the environment variable THRESHOLD when running the Container instance. Accepts floating values from 0 to 1.
 
 **Example:**
