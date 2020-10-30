@@ -125,7 +125,16 @@ __Install SDK Wheel__
 !!! note
     Replace &lt;SDK WHEEL LINK&gt; with the SDK link you copied earlier from the console.
 
-__Info about xailient sdk installed__
+__Start the Xailient Daemon which activates your license__
+
+```bash
+(env) $ python3 -m xailient.install
+```
+
+That's it! You can now start using the Xailient SDK. If this is your first time using the Xailient
+SDK then it may be helpful to read the remainder of this document.
+
+__Info about the installed Xailient SDK__
 
 ```bash
 (env) $ python3 -m pip show xailient
@@ -156,15 +165,6 @@ __Xailient SDK contents__
 * scripts/ -- License activation scripts
 * sharedLib_x86_64/ --Sample models that can be installed or linked with your applications
 
-
-__Activate your license__
-
-Go to __scripts__ folder and execute xailient-install script
-
-```bash
-(env) $ python3 -m xailient.install
-```
-
 ## Run sample code
 
 In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named "basic_sample.py" that demonstrates how to use the xailient sdk. 
@@ -176,8 +176,6 @@ Now run the sample script.
 ```bash
 (env) $ python3 -m xailient.samples.basic_sample
 ```
-
-Now go to __data__ folder to see the input and output images.
 
 Input Image | Output Image
 :-------------------------:|:-------------------------:
@@ -195,7 +193,7 @@ When you install a new SDK with a different model using pip install, you do not 
 
 ## Uninstall Xailient
 
-Go to xailient/scripts folder and run the uninstalltion script.
+Run the uninstallation script.
 
 ``` bash
 (env) $ python3 -m xailient.install
