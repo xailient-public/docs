@@ -196,7 +196,7 @@ When you install a new SDK with a different model using pip install, you do not 
 Run the uninstallation script.
 
 ``` bash
-(env) $ python3 -m xailient.install
+(env) $ python3 -m xailient.uninstall
 ```
 
 Pip uninstall xailient
