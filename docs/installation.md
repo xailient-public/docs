@@ -32,10 +32,8 @@ For ARM32, we have tested on the following device:
 __Minimum software requirements:__
 
 * Glibc 2.27
-* Python3.7
-* Pip for python3.7
-* OpenCV
-* Curl
+* Python >=3.6
+* Pip
 * VirtualEnv
 
 If your device does not meet the minimum software required, please follow the instructions below to install them.
@@ -49,34 +47,25 @@ $ sudo apt-get update
 !!! note
     apt-get update to download the package lists from the repositories and "update" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
 
-__Install python3.7__
+__Install python3__
+
+The Xailient SDK works with python 3.6 or later. Here we install python 3.7 though you could install any version
+of python >=3.6.
 
 ```bash
 $ sudo apt-get install python3.7
 ```
 
-__Install pip for python3.7__
+__Install pip for python3__
 
 ```bash
 $ sudo apt-get install python3-pip
 ```
 
-__Install OpenCV__
-
-```bash
-$ sudo apt-get install python-opencv
-```
-
-__Install Curl__
-
-```bash
-$ sudo apt-get install curl
-```
-
 __Install VirtualEnv__
 
 ```bash
-$ python3.7 -m pip install --user virtualenv
+$ python3 -m pip install --user virtualenv
 ```
 
 __Create a Virtual Environment (Recommended)__
@@ -103,10 +92,6 @@ To deactivate the virtual environment later,
 
 ## Install XailientSDK
 
-!!! note
-    In 18.04 Ubuntu, by default __pip3__ is for python3.6. So we will use __python3.7 -m pip__ command instead to use pip for python3.7.
-    If pip3 for your device defaults to python3.7, feel free to replace the command __python3.7 -m pip__ with __pip3__.
-
 __Get SDK Wheel Link__
 
 Go to the Console and navigate to __MANAGE AI MODELS__. For the model you want to deploy, select the SDK you have build for your target platform. 
@@ -128,22 +113,31 @@ __Install SDK Wheel__
 ##### Install using downloaded SDK wheel file
 
 ```bash
-(env) $ python3.7 -m pip install <download_path/wheel_file_name>
+(env) $ python3 -m pip install <download_path/wheel_file_name>
 ```
 
 ##### Install using SDK link
 
 ```bash
-(env) $ python3.7 -m pip install "<SDK WHEEL LINKs>"
+(env) $ python3 -m pip install "<SDK WHEEL LINKs>"
 ```
 
 !!! note
     Replace &lt;SDK WHEEL LINK&gt; with the SDK link you copied earlier from the console.
 
-__Info about xailient sdk installed__
+__Start the Xailient Daemon which activates your license__
 
 ```bash
-(env) $ python3.7 -m pip show xailient
+(env) $ sudo python3 -m xailient.install
+```
+
+That's it! You can now start using the Xailient SDK. If this is your first time using the Xailient
+SDK then it may be helpful to read the remainder of this document.
+
+__Info about the installed Xailient SDK__
+
+```bash
+(env) $ python3 -m pip show xailient
 ```
 
 You can get information about the version of xailient sdk installed, support email address, and location of the installation. 
@@ -171,54 +165,17 @@ __Xailient SDK contents__
 * scripts/ -- License activation scripts
 * sharedLib_x86_64/ --Sample models that can be installed or linked with your applications
 
-
-__Install tflite runtime__
-
-Install the tflite runtime using requirements.txt file.
-
-```bash
-(env) $ python3.7 -m pip install -r requirements.txt
-```
-
-__Activate your license__
-
-Go to __scripts__ folder and execute xailient-install script
-
-```bash
-(env) $ cd scripts
-(env) $ sudo ./xailient-install
-```
-
 ## Run sample code
 
 In the xailient folder of the install location, go to __samples__ folder. This folder contains a sample python script named "basic_sample.py" that demonstrates how to use the xailient sdk. 
 
-The script reads an image named "beatles.jpg" from __data__ folder, runs the detection sdk on this image and saves output to "beatles_output.jpg" in the same folder.
-
-Before we can run this script, we need to ensure that we give the OPTIMAL THRESHOLD.
-
-Go to the Console, navigate to __MANAGE AI MODELS__ and click on the model which you have installed. 
-Scroll down to __Evaluation Results__ where you can find __BEST THRESHOLD__.
-
-<p align="center">
-  <img src="../img/console/Evaluation_thresh.png">
-</p>
-
-Then using a text editor of your choice, edit the basic_sample.py script to include the value for __BEST THRESHOLD__ as found above.
-
-<p align="center">
-  <img src="../img/console/best_thresh.png">
-</p>
+The script reads an image named "beatles.jpg" from __data__ folder, runs the detection sdk on this image and saves output to "beatles_output.jpg" in the current working directory.
 
 Now run the sample script.
 
-
 ```bash
-(env) $ cd ../samples
-(env) $ python3.7 basic_sample.py
+(env) $ python3 -m xailient.samples.basic_sample
 ```
-
-Now go to __data__ folder to see the input and output images.
 
 Input Image | Output Image
 :-------------------------:|:-------------------------:
@@ -228,29 +185,25 @@ Input Image | Output Image
 ## Update Xailient SDK Model
 
 ```bash
-(env) $ python3.7 -m pip uninstall xailient
-(env) $ python3.7 -m pip install "<new SDK WHEEL URL>"
+(env) $ python3 -m pip uninstall xailient
+(env) $ python3 -m pip install "<new SDK WHEEL URL>"
 ```
 
 When you install a new SDK with a different model using pip install, you do not need to run the license activation script again.
 
 ## Uninstall Xailient
 
-Go to xailient/scripts folder and run the uninstalltion script.
+Run the uninstallation script.
 
 ``` bash
-(env) $ ../scripts
-(env) $ sudo ./xailient-uninstall
+(env) $ sudo python3 -m xailient.uninstall
 ```
 
 Pip uninstall xailient
 
 ```bash
-(env) $ python3.7 -m pip uninstall xailient
+(env) $ python3 -m pip uninstall xailient
 ```
-
-Keep in mind that after uninstall, the data folder and sample folder will remain.
-When you install a new SDK with a different model, these folders will be reintegrated into the SDK. This allows users to easily move data and scripts across different SDKs.
 
 Note that any changes to the basic_sample.py python script will be overwritten so keep a backup if you intend to keep any changes.
 
