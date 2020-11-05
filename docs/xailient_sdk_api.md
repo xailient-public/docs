@@ -1,6 +1,6 @@
 # Xailient SDK API Documentation
 
-**Xailient SDK Version: 1.0.6**
+**Xailient SDK Version: 1.0.7**
 
 ## dnn.Detector Class
 
