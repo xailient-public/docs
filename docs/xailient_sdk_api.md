@@ -12,7 +12,7 @@ detector = dnn.Detector(int)
 
 | Arguments     | Input Type    | Default Value | Description   |
 | ------------- |:-------------:| :------------:| -------------|
-| cores _(optional)_         | int           | 1             |   Number of threads to start for running the Detector. This gives the ability to run multiple threads for inferencing. This value should be tuned and select based on the use case to maximise overall performance. |
+| threads _(optional)_         | float           | 1             |   Number of threads to start for running the Detector. This gives the ability to run multiple threads for inferencing. This value should be tuned and select based on the use case to maximise overall performance. |
 
 #### Example
 
@@ -55,7 +55,7 @@ _, bboxes = detector.process_frame(numpy.ndarray, int)
 | Arguments     | Input Type    | Default Value | Description   |
 | ------------- |:-------------:| :------------:| -------------|
 | image         | numpy.ndarray           | -             |   Image as numpy array |
-| threshold _(optional)_         | int           | 0.4             |   Value between 0 and 1 for confidence score |
+| threshold _(optional)_         | float           | The default threshold is built into the SDK and is an optimal value determined when the model was trained.             |   Value between 0 and 1 for confidence score |
 
 #### Returns
 
