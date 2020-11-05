@@ -195,18 +195,14 @@ When you install a new SDK with a different model using pip install, you do not 
 
 Run the uninstallation script.
 
+```bash
+(env) $ sudo python3 -m xailient.uninstall
 ```
-(env) $ sudo /<Xailient Install Location>/xailient/scripts/xailient-uninstall
-```
-
-!!! note
-    If you don't know Xailient Install Location, type ```python3 -m pip show``` to find out.
-
 
 Pip uninstall xailient
 
 ```bash
-(env) $ sudo python3 -m xailient.uninstall
+(env) $ python3 -m pip uninstall xailient
 ```
 
 Note that any changes to the basic_sample.py python script will be overwritten so keep a backup if you intend to keep any changes.
