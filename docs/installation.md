@@ -177,7 +177,7 @@ The script reads an image named "beatles.jpg" from __data__ folder, runs the det
 Now run the sample script.
 
 ```bash
-(env) $ python3 -m xailient.samples.basic_sample
+(env) $ python3 -m samples/basic_sample.py
 ```
 
 Input Image | Output Image
