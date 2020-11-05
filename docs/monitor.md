@@ -5,7 +5,7 @@ With the Console, your can monitor your deployed AI models. You can view the mod
 Go to __DASHBOARD__ form the navigation menu on the left.
 
 <p align="center">
-    <img src="../img/console/nav_dashboard.png">
+    <img src="../img/console/Dashboard/Dashboard.png">
 </p>
 
 If you have not deployed any model yet, this is what your dashboard should look like.

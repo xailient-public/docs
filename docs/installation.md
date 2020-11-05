@@ -99,10 +99,16 @@ Go to the Console and navigate to __MANAGE AI MODELS__. For the model you want t
 !!! note
     If you have not build an SDK yet, refer to __Build SDK__ section of the documentation.
 
-Click on the target platform for the model to download and copy the SDK link.
+Click on the <img src="../img/console/AI Models/Copy.png" height=30 width=30> icon left side of the platform to copy the downlooad link.
 
 <p align="center">
-  <img src="../img/console/CopySDKLink.png">
+  <img src="../img/console/AI Models/PreTrainedModels-SDKBuilt-copy.png">
+</p>
+
+Click on the target platform for the model to download.
+
+<p align="center">
+  <img src="../img/console/AI Models/PreTrainedModels-SDKBuilt-downlaod.png">
 </p>
 
 !!! note
@@ -128,8 +134,10 @@ __Install SDK Wheel__
 __Start the Xailient Daemon which activates your license__
 
 ```bash
-(env) $ sudo python3 -m xailient.install
+(env) $ sudo /<Xailient Install Location>/xailient/scripts/xailient-install
 ```
+!!! note
+    If you don't know Xailient Install Location, type ```python3 -m pip show``` to find out.
 
 That's it! You can now start using the Xailient SDK. If this is your first time using the Xailient
 SDK then it may be helpful to read the remainder of this document.
@@ -174,7 +182,7 @@ The script reads an image named "beatles.jpg" from __data__ folder, runs the det
 Now run the sample script.
 
 ```bash
-(env) $ python3 -m xailient.samples.basic_sample
+(env) $ python3 -m samples/basic_sample.py
 ```
 
 Input Image | Output Image
@@ -195,9 +203,12 @@ When you install a new SDK with a different model using pip install, you do not 
 
 Run the uninstallation script.
 
-``` bash
-(env) $ sudo python3 -m xailient.uninstall
+```bash
+(env) $ sudo /<Xailient Install Location>/xailient/scripts/xailient-uninstall
 ```
+
+!!! note
+    If you don't know Xailient Install Location, type ```python3 -m pip show``` to find out.
 
 Pip uninstall xailient
 
