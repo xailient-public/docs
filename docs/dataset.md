@@ -29,7 +29,7 @@ Here, you will see a list of all the public datasets that we have pre-loaded and
     Here is what the CSV file should look like:
 
     <p align="center">
-    <img src="../img/console/PrepareLabel.png">
+    <img src="../img/console/Dataset/PrepareLabel.png">
     </p>
  
 
