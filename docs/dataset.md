@@ -77,11 +77,11 @@ Here, you will see a list of all the public datasets that we have pre-loaded and
     If the sanity check fails then the ERROR DETAILS could explain the reason. For example, here we have uploaded a CSV labels file where not a single image in the .zip file has a corresponding annotation. So make sure at least 1 row in the CSV file corresponds to an image filename in the .zip file. You can correct these errors and re-upload the CSV by clicking __UPDATE LABEL__.
 
     <p align="center">
-    <img src="../img/console/Sanity_error.png">
+    <img src="../img/console/Dataset/SanityCheckResult-Error.png">
     </p>
 
 
-    Sometimes the sanity check will pass with partial success because we detected that some images don’t contain labels and vice versa, which is acceptable since this means the rest have corresponding labels. In this case you acknowledge the error and can manually approve it by clicking the __APPROVE__ button.
+    Sometimes the sanity check will pass with partial success because we detected that some images don't contain labels and vice versa, which is acceptable since this means the rest have corresponding labels. In this case you acknowledge the error and can manually approve it by clicking the __APPROVE__ button.
     
     <p align="center">
     <img src="../img/console/Dataset/SanityCheckResult-PartialSuccess.png">

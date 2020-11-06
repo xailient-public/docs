@@ -39,29 +39,31 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 5. Select a value for __Speed vs Accuracy__ between 1 to 5. 
 
     <p align="center">
-    <img src="../img/console/SpeedVsAccuracy.png">
+    <img src="../img/console/AI Models/TrainAIModel-Step3.png">
     </p>
 
-    __1__ is the fastest. It is best for larger objects with simple backgrounds. You should select option 1 if your objects of interest are medium to big (close range).
+    !!! note
+        __1__ is the fastest. It is best for larger objects with simple backgrounds. You should select option 1 if your objects of interest are medium to big (close range).
+
+        __2__ is slower than 1 and should be used if your objects of interest are small to medium (medium range).
 
 
-    __2__ is slower than 1 and should be used if your objects of interest are small to medium (medium range).
+        __3__ is slower than 2 and should be used if your objects of interest are small (long range).
 
 
-    __3__ is slower than 2 and should be used if your objects of interest are small (long range).
+        __4__ is slower than 3 and should be used if your objects of interest are smaller and background is complex (longer range).
 
 
-    __4__ is slower than 3 and should be used if your objects of interest are smaller and background is complex (longer range).
+        __5__ is the slowest. It is best for smaller objects with complex backgrounds. You should use option 5 if your objects of interest are very small and background is complex (longest range).
 
-
-    __5__ is the slowest. It is best for smaller objects with complex backgrounds. You should use option 5 if your objects of interest are very small and background is complex (longest range).
+6. Select the __Cortical Function__ (Type of AI model you want to train)
 
 ## Begin Training
 
 5. Begin training by clicking __BEGIN TRAINING__.
 
     <p align="center">
-    <img src="../img/console/BeginTraining.png">
+    <img src="../img/console/AI Models/TrainAIModel-BeginTraining.png">
     </p>
 
     <p align="center">
