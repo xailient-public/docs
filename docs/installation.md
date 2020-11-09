@@ -195,7 +195,7 @@ When you install a new SDK with a different model using pip install, you do not 
 
 Run the uninstallation script.
 
-``` bash
+```bash
 (env) $ sudo python3 -m xailient.uninstall
 ```
 
