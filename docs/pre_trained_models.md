@@ -8,17 +8,17 @@
 
 ## List Pre-trained Models
 
-From the navigation menu on the left, go to __MANAGE AI MODEL__
+From the navigation menu on the left, under __AI Models__ click __Pre-Trained__
 
 <p align="center">
-  <img src="../img/console/nav_list_models.png">
+  <img src="../img/console/Dashboard/LeftMenu-PretrainedAI.png" width="250">
 </p>
 
 
-Here, under __Pre-trained Public Models__ you will see a list of all the pre-trained models available.
+Here, you will see a list of all the pre-trained models available.
 
 <p align="center">
-  <img src="../img/console/ManageAIModels_cropped.png">
+  <img src="../img/console/AI Models/PretrainedAIModels-List.png">
 </p>
 
 ## Build SDK

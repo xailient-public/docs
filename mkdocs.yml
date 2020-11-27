@@ -1,6 +1,7 @@
 site_name: Xailient Docs
 nav:
     - Getting Started with Console: console_getting_started.md
+    - Datasets: dataset.md
     - Pre-trained AI Models: pre_trained_models.md
     - Train Your Own AI: custom_models.md
     - Evaluate your AI: video_inference.md
