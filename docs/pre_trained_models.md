@@ -1,11 +1,5 @@
 # Pre-trained AI Models
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/lW5SU0t0dbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-<!-- blank line -->
-
 ## List Pre-trained Models
 
 From the navigation menu on the left, under __AI Models__ click __Pre-Trained__
