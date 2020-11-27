@@ -1,5 +1,11 @@
 # Evaluate your AI
 
+<!-- blank line -->
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/u5tYxLGTh7E?start=373" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<!-- blank line -->
+
 One cool feature in Xailient Console is that you can test your model quickly. By uploading a wild video and you can get a processed video with inferences of the trained AI model.
 
 That means that you don't have to go through the whole process of deploying your AI model on your device inorder to see how it performs.

@@ -1,5 +1,12 @@
 # Datasets
 
+<!-- blank line -->
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/u5tYxLGTh7E?start=84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<!-- blank line -->
+
+
 With Xailient Console, you can can either use the pre-loaded datasets, upload your own dataset, or combine different datasets inorder to train your AI.
 
 ## Pre-loaded Dataset
