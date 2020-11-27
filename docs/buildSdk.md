@@ -1,5 +1,11 @@
 # Build Deployable SDK for your Targeted Device
 
+<!-- blank line -->
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/u5tYxLGTh7E?start=429" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<!-- blank line -->
+
 1. To build an SDK for your device, go to __AI Models__ page. 
 
 2. Locate the model you want to build the SDK for and click on __Build SDK__ button <img src="../img/console/AI Models/BuildSDKButton.png" height=30 width=30> for that model.

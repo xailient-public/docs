@@ -1,5 +1,11 @@
 # Monitor your AI
 
+<!-- blank line -->
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/u5tYxLGTh7E?start=521" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<!-- blank line -->
+
 With the Console, your can monitor your deployed AI models. You can view the models you have deployed, the device you have installed the models in and the frame counts you have used.
 
 From the navigation menu on the left, under __Devices__, click __Manage Devices__.
