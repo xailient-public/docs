@@ -1,4 +1,4 @@
-# Deploy Your AI
+# Native Installation
 
 !!! note
       This version of the documentation is for installation of Xailient SDK using wheel file (.whl). 
@@ -111,8 +111,6 @@ Click on the target platform for the model to download.
   <img src="../img/console/AI Models/PreTrainedModels-SDKBuilt-downlaod.png">
 </p>
 
-!!! note
-    When you click the button &lt;ARM32&gt; or &lt;x86_64&gt;, it downloads the SDK wheel file as well as copies the link to the wheel file in your clipboard.
 
 __Install SDK Wheel__
 
