@@ -58,7 +58,7 @@ Click on the target platform for the model to download.
 <br>
 ## Run the Xailient SDK Container
 
-    $ docker run -e SDK_LINK="<LINK>" -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient model-inference:1.0.1
+    $ docker run -e SDK_LINK="<LINK>" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient model-inference:1.0.1
 
 Replace `<LINK>` with the SDK link obtained earlier. Here you are passing the link to the container as an environment variable.
 
@@ -68,11 +68,10 @@ run through the Xailient SDK.
 Replace `<OUTPUT_IMAGES_DIR>` with the __full path__ to a directory where the images and videos with their predicted bounding
 boxes drawn will be placed.
 
-Make sure to include __double quotes around the SDK download link, input/output directories__. The link may contain characters like `&` that can cause problems if not quoted, the directories may include white spaces which can also cause problems if not quoted. 
 
 **Example:**
 
-    $ docker run -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "~/Desktop/input:/input" -v "~/Workspace/output:/output" xailient/model-inference:1.0.1
+    $ docker run -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "~/Desktop/input":/input -v "~/Workspace/output":/output xailient/model-inference:1.0.1
 
 In this example, all predicted images and videos will appear in the `~/Workspace/output` of the host OS.
 
@@ -86,6 +85,8 @@ In this example, all predicted images and videos will appear in the `~/Workspace
     Providing an `SDK_LINK` takes precedence over placing the Xailient SDK file in the "input" directory. Therefore, be aware when swapping in different Xailient SDKs.
 
 
+!!! Note
+      Make sure to include __double quotes around the SDK download link, input/output directories__. The link may contain characters like `&` that can cause problems if not quoted, the directories may include white spaces which can also cause problems if not quoted. 
 
 <br>
 ## Default Behaviour
@@ -111,11 +112,11 @@ To disable this set the environment variable IMAGES to False.
 
 When SDK is downloaded from the console:
 
-    $ docker run -e IMAGES=False -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e IMAGES=False -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 When SDK is copied from the console:
 
-    $ docker run -e IMAGES=False -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e IMAGES=False -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 ### REBUILD (default=True)
 Controls whether videos with predicted bounding boxes are created in the output directory for input videos.
@@ -125,11 +126,11 @@ See the `FPS` and `EVERY` option for even more control over the output video tha
 
 When SDK is downloaded from the console:
 
-    $ docker run -e REBUILD=True -e EVERY=20 -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e REBUILD=True -e EVERY=20 -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 When SDK is copied from the console:
 
-    $ docker run -e REBUILD=True -e EVERY=20 -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e REBUILD=True -e EVERY=20 -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 ### EVERY (default=1)
 Perform inference on every ith frame of all given videos.
@@ -138,11 +139,11 @@ Perform inference on every ith frame of all given videos.
 
 When SDK is downloaded from the console:
 
-    $ docker run -e EVERY=20 -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e EVERY=20 -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 When SDK is copied from the console:
 
-    $ docker run -e EVERY=20 -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e EVERY=20 -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 ### FPS (defaults to the original video fps)
 Reconstructed videos will have this many frames per second.
@@ -151,11 +152,11 @@ Reconstructed videos will have this many frames per second.
 
 When SDK is downloaded from the console:
 
-    $ docker run -e FPS=30  -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e FPS=30  -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 When SDK is copied from the console:
 
-    $ docker run -e FPS=30  -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e FPS=30  -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 ### THRESHOLD (default=0.5)
 Play around with different confidence thresholds by passing in the environment variable THRESHOLD when running the Container instance. Accepts floating values from 0 to 1.
@@ -164,11 +165,11 @@ Play around with different confidence thresholds by passing in the environment v
 
 When SDK is downloaded from the console:
 
-    $ docker run -e THRESHOLD=0.8 -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e THRESHOLD=0.8 -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 When SDK is copied from the console:
 
-    $ docker run -e THRESHOLD=0.8 -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e THRESHOLD=0.8 -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 ### LOG (default=True)
 Controls whether a .csv file with bounding boxes for all predicted images is created in the output directory.
@@ -178,11 +179,11 @@ To disable this set the environment variable LOG to False.
 
 When SDK is downloaded from the console:
 
-    $ docker run -e LOG=False -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e LOG=False -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 When SDK is copied from the console:
 
-    $ docker run -e LOG=False -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>:/input" -v "<OUTPUT_IMAGES_DIR>:/output" xailient/model-inference:1.0.1
+    $ docker run -e LOG=False -e SDK_LINK="https://ReallyLongUrl/AAaDDY2MzE1ODQ0NzQx" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 <br>
 ## Releases
