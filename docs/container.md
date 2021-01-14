@@ -58,7 +58,7 @@ Click on the target platform for the model to download.
 <br>
 ## Run the Xailient SDK Container
 
-    $ docker run -e SDK_LINK="<LINK>" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient model-inference:1.0.1
+    $ docker run -e SDK_LINK="<LINK>" -v "<INPUT_IMAGES_DIR>":/input -v "<OUTPUT_IMAGES_DIR>":/output xailient/model-inference:1.0.1
 
 Replace `<LINK>` with the SDK link obtained earlier. Here you are passing the link to the container as an environment variable.
 
