@@ -1,5 +1,6 @@
 site_name: Xailient Docs
 nav:
+    - Welcome to Xailient SDK Documentation: index.md
     - Getting Started with Console: console_getting_started.md
     - Datasets: dataset.md
     - Pre-trained AI Models: pre_trained_models.md

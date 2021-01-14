@@ -17,14 +17,14 @@
 </figure>
 <!-- blank line -->
 
-<br>
-<a class="button" href="/en/latest/installation/">Getting Started</a>
-<br>
-<br>
-<br>
-<a class="button" href="/en/latest/sample_code/">Sample Code</a>
-<br>
-<br>
-<br>
-<a class="button" href="https://www.xailient.com/blog">Blogs</a>
+## Implementation Code
+
+The code for training a model and implementing based on your use-case can easily become clumsy. Take a look at how elegant and simple Xailient's implementation code are 
+<a href="/en/latest/sample_code/" style="text-decoration:underline; color:#7e57c2">here</a>.
+
+## Blog
+
+Do visit our Blog 
+<a href="https://www.xailient.com/blog" style="text-decoration:underline; color:#7e57c2">here</a>
+to read our expert's take on AI, IoT and how Xailient efficiently tackles one of the major issues in Computer Vision.
 

@@ -3,8 +3,8 @@
 }
 
 .md-logo img{
-    height: 25px;
-    width: 100px;
+  height: 25px;
+  width: 100px;
 }
 
 /* Buttons */
@@ -18,7 +18,12 @@
   text-transform: uppercase;
 }
 
-button:hover, button:active {
+.button:hover, .button:active {
   background-color: #593696;
   cursor: pointer;
+}
+
+/* Logo img size */
+.md-header-nav__button.md-logo img,.md-header-nav__button.md-logo svg{
+  width:4.2rem;
 }
