@@ -11,6 +11,18 @@ From the navigation menu on the left, under __AI Models__ click __Pre-Trained__
 
 Here, you will see a list of all the pre-trained models available.
 
+By default, you will see the pre-trained models in __"CARD VIEW"__.
+
+<p align="center">
+  <img src="../img/console/AI Models/PretrainedAIModels-Card.png">
+</p>
+
+You can switch to __"LIST VIEW"__ by clicking on the top-right button.
+
+<p align="center">
+  <img src="../img/console/AI Models/PretrainedAIModels-ChangeView.png">
+</p>
+
 <p align="center">
   <img src="../img/console/AI Models/PretrainedAIModels-List.png">
 </p>
