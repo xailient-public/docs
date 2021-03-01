@@ -60,14 +60,13 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 
     Learn more about the different types of AI models you can train on Xailient AI Console.
 
-    1. [Selective Attention Network](https://xailient-docs.readthedocs.io/en/latest/selective_attention_network)
+    1. Selective Attention Network
 
     2. [Multi Class Object Detector](https://xailient-docs.readthedocs.io/en/latest/multiclass_object_detector)
 
-    3. [Image Classifier](https://xailient-docs.readthedocs.io/en/latest/image_classifier)
+    3. Image Classifier
 
-    4. [ANPR (License Plate Reader)](https://xailient-docs.readthedocs.io/en/latest/anpr)
-
+    4. ANPR (License Plate Reader)
 
 ## Begin Training
 
