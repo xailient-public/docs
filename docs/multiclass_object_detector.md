@@ -77,11 +77,6 @@ debug: False
 Here is a sample configuration for the YOLO architeture. 
 
 ``` yml
-data:
-  input_dim: 64  
-  target_dim: 64 
-  img_extension: 'jpg'
-
 train:
   img_dir: 'data/train/raw'
   labels_dir: 'data/train/labels.csv'
@@ -92,6 +87,4 @@ train:
 test:
   img_dir: 'data/test/raw'
   labels_dir: 'data/test/labels.csv'
-  threshold: 0.15 
-  split_ratio: 0.1
 ```
