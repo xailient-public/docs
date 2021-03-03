@@ -132,7 +132,7 @@ __Install SDK Wheel__
 __Start the Xailient Daemon which activates your license__
 
 ```bash
-(env) $ sudo python3 -m xailient.install
+(env) $ python3 -m xailient.install
 ```
 
 That's it! You can now start using the Xailient SDK. If this is your first time using the Xailient
@@ -200,7 +200,7 @@ When you install a new SDK with a different model using pip install, you do not 
 Run the uninstallation script.
 
 ```bash
-(env) $ sudo python3 -m xailient.uninstall
+(env) $ python3 -m xailient.uninstall
 ```
 
 Pip uninstall xailient
