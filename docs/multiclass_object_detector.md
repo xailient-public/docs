@@ -13,7 +13,7 @@ To train a multi-class object detector with SSD architecture, you can either use
 
 The training configuration file gives you full control of the hyperparameters for the trainng.
 
-There are the setting you can modify:
+These are the settings you can modify:
 
 * __batch_size__: The batch size is a number of samples processed before the model is updated. The size of a batch must be more than or equal to one and less than or equal to the number of samples in the training dataset.
 
