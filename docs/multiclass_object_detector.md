@@ -44,7 +44,7 @@ train:
   # one of the aspect ratios has to be 1, the aspect ratios determine how many
   # anchor boxes will be generated for each location on every prediction feature map
   aspect_ratios: [1.0, 2.0, 0.5, 3.0, 0.3]  # The aspect ratios implemented in the original SSD paper.
-  l2_regularization: 0
+  l2_regularization: 1.0e-3
 
 test:
   decile_evaluation: True
