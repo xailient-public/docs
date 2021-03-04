@@ -31,7 +31,6 @@ Here is a sample configuration for the SSD architeture.
 data:
   reshape_dim: 300
   tile_dim: 300
-  img_extension: 'jpg'
 
 train:
   model_arch: 'MobileNetV2SSD'
@@ -46,9 +45,6 @@ train:
   aspect_ratios: [1.0, 2.0, 0.5, 3.0, 0.3]  # The aspect ratios implemented in the original SSD paper.
   l2_regularization: 1.0e-3
 
-test:
-  decile_evaluation: True
-
 loss:
   neg_pos_ratio: 3  # Used for hard negative mining. Ratio of negatives to positives.
   alpha: 1.0  # Used as a factor to multiply localization loss by in multi-box loss.
@@ -61,15 +57,6 @@ optimizer:
 inference:
   probability_threshold: 0.1
   nms_max_iou: 0.45
-
-callbacks:
-  scheduler: 'plateau'  # Choices: ['plateau']
-  logger: True
-  checkpoint: True
-
-target_platform: 'ARM'
-cuda_device: '0'
-debug: False
 ```
 
 ### YOLO
@@ -78,13 +65,7 @@ Here is a sample configuration for the YOLO architeture.
 
 ``` yml
 train:
-  img_dir: 'data/train/raw'
-  labels_dir: 'data/train/labels.csv'
   batch_size: 64
   epochs: 12
   generate_anchor: false
-
-test:
-  img_dir: 'data/test/raw'
-  labels_dir: 'data/test/labels.csv'
 ```
