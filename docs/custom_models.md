@@ -36,31 +36,11 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 
 ## Select type of AI model
 
-5. Select a value for __Speed vs Accuracy__ between 1 to 5. 
-
-    <p align="center">
-    <img src="../img/console/AI Models/TrainAIModel-Step3.png">
-    </p>
-
-    !!! note
-        __1__ is the fastest. It is best for larger objects with simple backgrounds. You should select option 1 if your objects of interest are medium to big (close range).
-
-        __2__ is slower than 1 and should be used if your objects of interest are small to medium (medium range).
-
-
-        __3__ is slower than 2 and should be used if your objects of interest are small (long range).
-
-
-        __4__ is slower than 3 and should be used if your objects of interest are smaller and background is complex (longer range).
-
-
-        __5__ is the slowest. It is best for smaller objects with complex backgrounds. You should use option 5 if your objects of interest are very small and background is complex (longest range).
-
 6. Select the __Cortical Function__ (Type of AI model you want to train)
 
-    Learn more about the different types of AI models you can train on Xailient AI Console.
+    Learn more about the different types of AI models you can train on Xailient AI Console and specific training settings for these models.
 
-    1. Selective Attention Network
+    1. [Selective Attention Network](https://xailient-docs.readthedocs.io/en/latest/selective_attention_network)
 
     2. [Multi Class Object Detector](https://xailient-docs.readthedocs.io/en/latest/multiclass_object_detector)
 
