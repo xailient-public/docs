@@ -2,7 +2,13 @@
 
 Multi Class Object Detector is used when you want to detect and identify multiple classes of objects in one or more images.
 
-[Image to illustrate multi class object detector]
+<p align="center">
+<figure>
+  <img src="../img/console/AI Models/multiclass_object_detection.png">
+  <figcaption>Multi-class Object Detection <a href="https://miro.medium.com/max/1400/0*IW_DpAtoCrDBVhdO.png">(Source)</a></figcaption>
+</figure>
+</p>
+
 
 In Xailient Console, you can train two popular multi-class object detectors:
 
