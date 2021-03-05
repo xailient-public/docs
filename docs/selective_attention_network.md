@@ -50,7 +50,7 @@ You can keep all the other setting to default.
 
 * __transforms__: Transform settings are used to define specific transformations for data augmentation. If the value for __augment_multiplier__ is greater than 0, you can modify the __transforms__ settings depending on how you want to augment your training dataset.
 
-    To apply __Resize__, __RandomRotate__ and __RandomCrop__ transforms, you also need to set __p__ value to greater than 1.
+    To apply __RandomRotate__ and __RandomCrop__ transforms, you also need to set __p__ value to greater than 1.
 p = probability between 0 and 1. If __p__ is 0 then that transform is not applied. If __p__ is 0.5 then half the original images get transformed. If it's 1 then all the original images get transformed.
 
 Here is the default configuration for training a Selective Attention Network. 
@@ -70,11 +70,8 @@ train:
 test:
   split_ratio: 0.1
 
+
 transforms:
-  Resize:
-    p: 0
-    height: 128
-    width: 128
   HorizontalFlip: False
   VerticalFlip: False
   Rotate:
