@@ -35,6 +35,8 @@ __Minimum software requirements:__
 * Python >=3.6
 * Pip
 * VirtualEnv
+* libcurl4 
+* php-curl
 
 If your device does not meet the minimum software required, please follow the instructions below to install them.
 
@@ -60,6 +62,13 @@ __Install pip for python3__
 
 ```bash
 $ sudo apt-get install python3-pip
+```
+
+__Install other required libraries__
+
+```bash
+$ sudo apt-get install libcurl4 php-curl
+$ python3 -m pip install scikit-build
 ```
 
 __Install VirtualEnv__

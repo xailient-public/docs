@@ -105,3 +105,13 @@ sudo sh -c "echo '/usr/lib/xailient' > /etc/ld.so.conf.d/xailient.conf"
 sudo chmod +x /usr/lib/xailient/*
 sudo ldconfig
 ```
+
+### 8. I'm getting "error while loading shared libraries: libcurl.so.4: cannot open shared object file: No such file or directory"
+
+Some of the required libraries maybe missing on your device. 
+
+__Solution:__ Install the following dependencies:
+
+``` bash
+sudo apt-get install libcurl4 php-curl
+```
