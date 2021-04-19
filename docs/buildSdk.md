@@ -37,7 +37,7 @@ By default, you will see the models in __"CARD VIEW"__.
 
 4. When the SDK build is completed, you will get an email notification, with an SDK download link.
 
-5. You can also download the SDK from the Console. Go to __AI Models__ page and locate the model for which you have build the SDK.
+5. You can also download the SDK from the Console. Go to __AI Models__ page and locate the model for which you have built the SDK.
 
 6. Click on __Download/Copy SDK__ button for that model. 
 
@@ -69,7 +69,7 @@ You can switch to __"LIST VIEW"__ by clicking on the top-right button.
 
 4. When the SDK build is completed, you will get an email notification, with an SDK download link.
 
-5. You can also download the SDK from the Console. Go to __AI Models__ page and locate the model for which you have build the SDK.
+5. You can also download the SDK from the Console. Go to __AI Models__ page and locate the model for which you have built the SDK.
 
 6. Click on __Download/Copy SDK__ button for that model. 
 
