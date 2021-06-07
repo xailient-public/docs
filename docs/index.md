@@ -20,7 +20,7 @@
 ## Implementation Code
 
 The code for training a model and implementing based on your use-case can easily become clumsy. Take a look at how elegant and simple Xailient's implementation code are 
-<a href="/en/latest/sample_code/" style="text-decoration:underline; color:#7e57c2">here</a>.
+<a href="/en/latest/sample_code.html" style="text-decoration:underline; color:#7e57c2">here</a>.
 
 ## Blog
 

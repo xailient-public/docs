@@ -7,7 +7,7 @@ To train a Selective Attention Model, you can either use the default training se
 If you are in __"Free"__ or __"Premium"__ subscription, you can control the training settings using a slider bar.
 
 <p align="center">
-<img src="../img/console/AI Models/Training-Config-SliderBar.png">
+<img src="../latest/img/console/AI Models/Training-Config-SliderBar.png">
 </p>
 
 Select a value for __Inference Speed vs Accuracy__. 
@@ -23,7 +23,7 @@ Select a value for __Inference Speed vs Accuracy__.
 If you are in __"Admin"__ subscription, you can upload a training configuration file to defie the training settings. The training configuration file gives you full control of the hyperparameters for the training.
 
 <p align="center">
-  <img src="../img/console/AI Models/Training-Config-Upload.png">
+  <img src="../latest/img/console/AI Models/Training-Config-Upload.png">
 </p>
 
 These are the settings you can modify:

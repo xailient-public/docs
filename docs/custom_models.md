@@ -12,7 +12,7 @@ To train any AI model, you will need training data.
 
 Xailient Console comes with pre-loaded public datasets.
 
-You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.io/en/latest/dataset/), [upload your own dataset](https://xailient-docs.readthedocs.io/en/latest/dataset/), or combine different datasets inorder to train your AI.
+You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.io/en/latest/dataset.html), [upload your own dataset](https://xailient-docs.readthedocs.io/en/latest/dataset.html), or combine different datasets inorder to train your AI.
 
 ## Select Dataset(s)
 
@@ -21,7 +21,7 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 2. Select dataset(s) by ticking the box(es). You can select a single or combine multiple (both public and private) datasets to train a model.
 
     <p align="center">
-    <img src="../img/console/AI Models/TrainAI-Step1-DatasetSetected.png">
+    <img src="../latest/img/console/AI Models/TrainAI-Step1-DatasetSetected.png">
     </p>
 
 ## Select Class(es)
@@ -31,7 +31,7 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 4. You can further select only specific subclasses within the (set of) datasets. A single model will train on the combined datasets and predict only those classes you have chosen here.
 
     <p align="center">
-    <img src="../img/console/AI Models/TrainAIModel-Step2.png">
+    <img src="../latest/img/console/AI Models/TrainAIModel-Step2.png">
     </p>
 
 ## Select type of AI model
@@ -40,9 +40,9 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 
     Learn more about the different types of AI models you can train on Xailient AI Console and specific training settings for these models.
 
-    1. [Selective Attention Network](https://xailient-docs.readthedocs.io/en/latest/selective_attention_network)
+    1. [Selective Attention Network](https://xailient-docs.readthedocs.io/en/latest/selective_attention_network.html)
 
-    2. [Multi Class Object Detector](https://xailient-docs.readthedocs.io/en/latest/multiclass_object_detector)
+    2. [Multi Class Object Detector](https://xailient-docs.readthedocs.io/en/latest/multiclass_object_detector.html)
 
     3. Image Classifier
 
@@ -53,11 +53,11 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 5. Begin training by clicking __BEGIN TRAINING__.
 
     <p align="center">
-    <img src="../img/console/AI Models/TrainAIModel-BeginTraining.png">
+    <img src="../latest/img/console/AI Models/TrainAIModel-BeginTraining.png">
     </p>
 
     <p align="center">
-    <img src="../img/console/TrainingStarted.png">
+    <img src="../latest/img/console/TrainingStarted.png">
     </p>
 
 ## View Training Status
@@ -65,18 +65,18 @@ You can either use the [pre-loaded datasets](https://xailient-docs.readthedocs.i
 To view the training status of your AI model, under __AI Models__ click __View__, and find your model under __Training Models__. Once the training is completed, you will get an email notification regarding it.
 
 <p align="center">
-<img src="../img/console/Dashboard/LeftMenu-CustomAIModels.png" width="250">
+<img src="../latest/img/console/Dashboard/LeftMenu-CustomAIModels.png" width="250">
 </p>
 
 
 <p align="center">
-<img src="../img/console/AI Models/CustomAIModels-List-InProgress.png">
+<img src="../latest/img/console/AI Models/CustomAIModels-List-InProgress.png">
 </p>
 
 ## Deploy your AI
 
-When the training is complete, you can build an SDK and install it on the targeted device. For more details on how to build an SDK, refer to [Build Deployable SDK](/en/latest/buildSdk/) section of the documentation
+When the training is complete, you can build an SDK and install it on the targeted device. For more details on how to build an SDK, refer to [Build Deployable SDK](/en/latest/buildSdk.html) section of the documentation
 
-For instructions on how to setup your device, install the SDK and run it, please refer to [Deploy You AI](/en/latest/installation/) section of the documentation.
+For instructions on how to setup your device, install the SDK and run it, please refer to [Deploy You AI](/en/latest/installation.html) section of the documentation.
 
-If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container/).
+If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container.html).

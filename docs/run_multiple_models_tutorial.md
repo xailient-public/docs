@@ -117,7 +117,7 @@ Go to the Console and navigate to __MANAGE AI MODELS__. For the model you want t
 Click on the target platform for the model to download and copy the SDK link.
 
 <p align="center">
-  <img src="../img/console/CopySDKLink_CarDetector.png">
+  <img src="../latest/img/console/CopySDKLink_CarDetector.png">
 </p>
 
 !!! note
@@ -233,7 +233,7 @@ Go to the Console and navigate to __MANAGE AI MODELS__. For the model you want t
 Click on the target platform for the model to download and copy the SDK link.
 
 <p align="center">
-  <img src="../img/console/CopySDKLink_LicensePlateDetector.png">
+  <img src="../latest/img/console/CopySDKLink_LicensePlateDetector.png">
 </p>
 
 !!! note

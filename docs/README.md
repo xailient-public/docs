@@ -1,8 +1,8 @@
 # Welcome to Xailient SDK Documentation
 
-## [Getting Started](/en/latest/installation/)
+## [Getting Started](/en/latest/installation.html)
 
-## [Sample Code](/en/latest/sample_code/)
+## [Sample Code](/en/latest/sample_code.html)
 
 ## [YouTube Channel](https://www.youtube.com/channel/UCCv1TVIY3KmJbern-edBRvw)
 

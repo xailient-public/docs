@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../img/container/docker_xailient.png">
+  <img src="../latest/img/container/docker_xailient.png">
 </p>
 <br>
 
@@ -43,16 +43,16 @@ Go to the Console and navigate to [MANAGE AI MODEL page](https://console.xailien
 !!! note
     If you have not build an SDK yet, refer to __Build SDK__ section of the documentation.
 
-Click on the <img src="../img/console/AI Models/Copy.png" height=30 width=30> icon left side of the platform to copy the downlooad link.
+Click on the <img src="../latest/img/console/AI Models/Copy.png" height=30 width=30> icon left side of the platform to copy the downlooad link.
 
 <p align="center">
-  <img src="../img/console/AI Models/PreTrainedModels-SDKBuilt-copy.png">
+  <img src="../latest/img/console/AI Models/PreTrainedModels-SDKBuilt-copy.png">
 </p>
 
 Click on the target platform for the model to download.
 
 <p align="center">
-  <img src="../img/console/AI Models/PreTrainedModels-SDKBuilt-downlaod.png">
+  <img src="../latest/img/console/AI Models/PreTrainedModels-SDKBuilt-downlaod.png">
 </p>
 
 <br>

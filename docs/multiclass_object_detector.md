@@ -4,7 +4,7 @@ Multi Class Object Detector is used when you want to detect and identify multipl
 
 <p align="center">
 <figure>
-  <img src="../img/console/AI Models/multiclass_object_detection.png">
+  <img src="../latest/img/console/AI Models/multiclass_object_detection.png">
   <figcaption>Multi-class Object Detection <a href="https://miro.medium.com/max/1400/0*IW_DpAtoCrDBVhdO.png">(Source)</a></figcaption>
 </figure>
 </p>
