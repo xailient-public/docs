@@ -37,4 +37,4 @@ Xailient SDKs are available in Python and C++.
 
 ### [Installation of Python SDK](https://xailient-docs.readthedocs.io/en/latest/installation_python/)
 
-### [Installation of C++ SDK](https://xailient-docs.readthedocs.io/en/latest/installation_c++/)
+### [Installation of C++ SDK](https://xailient-docs.readthedocs.io/en/latest/installation_c_plus_plus/)
