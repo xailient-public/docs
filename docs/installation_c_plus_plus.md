@@ -1,9 +1,6 @@
 # C++ Installation
 
-!!! note
-      This version of the documentation is for installation of Xailient SDK using wheel file (.whl). 
-      If you are looking for documentation for installion of Xailient SDK using SDK package, please visit our old [documentation](https://xailient.readthedocs.io/en/latest/installation/).
-      
+!!! note      
       If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container/).
 
 
@@ -17,7 +14,7 @@ To meet the minimum requirements, your device must be a x86_64 or ARM32 architec
 
 !!! note
 
-    To run Xailient SDK on Windows or MacOS, please run it inside a VirtualBox.
+    To run Xailient SDK on Windows or MacOS, please run it inside a VirtualBox or a docker container.
 
     Here are some resources you can refer to to install Ubuntu operating system on a VirtualBox:
 
@@ -34,7 +31,7 @@ For ARM32, we have tested on the following device:
 
 !!! note
 
-    If you are installing Python SDK, please refer to this [section](https://xailient-docs.readthedocs.io/en/latest/container/).
+    If you are installing Python SDK, please refer to this [section](https://xailient-docs.readthedocs.io/en/latest/installation_python/).
 
 
 ## Install XailientSDK
