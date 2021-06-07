@@ -1,7 +1,7 @@
 # Python Installation
 
 !!! note      
-      If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container/).
+      If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container.html).
 
 
 ## Device Setup
@@ -43,7 +43,7 @@ If your device does not meet the minimum software required, please follow the in
 
 !!! note
 
-    If you are installing C++ SDK, please refer to this [section](https://xailient-docs.readthedocs.io/en/latest/installation_c_plus_plus/).
+    If you are installing C++ SDK, please refer to this [section](https://xailient-docs.readthedocs.io/en/latest/installation_c_plus_plus.html).
 
 __Download the package lists and update information__
 

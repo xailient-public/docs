@@ -1,7 +1,7 @@
 # C++ Installation
 
 !!! note      
-      If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container/).
+      If your local machines doesn't meet the requirements for native installation we also offer Docker [Containers as a deployment option](https://xailient-docs.readthedocs.io/en/latest/container.html).
 
 
 ## Device Setup
@@ -31,7 +31,7 @@ For ARM32, we have tested on the following device:
 
 !!! note
 
-    If you are installing Python SDK, please refer to this [section](https://xailient-docs.readthedocs.io/en/latest/installation_python/).
+    If you are installing Python SDK, please refer to this [section](https://xailient-docs.readthedocs.io/en/latest/installation_python.html).
 
 
 ## Install XailientSDK
