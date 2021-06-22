@@ -17,11 +17,11 @@ Once the model training is completed successfully, you can see its predictions o
 To view the images, from __AI Models__ page, click on the successfully trained model.
 
 <p align="center">
-<img src="../img/console/AI Models/PretrainedAIModels-ListSelectModel.png">
+<img src="../latest/img/console/AI Models/PretrainedAIModels-ListSelectModel.png">
 </p>
 
 <p align="center">
-<img src="../img/console/AI Models/InferenceOnHeldOutImage-2.png">
+<img src="../latest/img/console/AI Models/InferenceOnHeldOutImage-2.png">
 </p>
 
 ## Video Inference
@@ -29,19 +29,19 @@ To view the images, from __AI Models__ page, click on the successfully trained m
 1. From the navigation menu on the left, under __AI Models__ click __View__ for Custom Trained models and __Pre-trained__ for pre-trained models.
 
     <p align="center">
-    <img src="../img/console/Dashboard/LeftMenu-PretrainedAI.png" width="250">
+    <img src="../latest/img/console/Dashboard/LeftMenu-PretrainedAI.png" width="250">
     </p>
 
-2. For a model that has completed training, and the status is __Success__, click on the <img src="../img/console/AI Models/UploadVideoButton.png" height=30 width=30> icon.
+2. For a model that has completed training, and the status is __Success__, click on the <img src="../latest/img/console/AI Models/UploadVideoButton.png" height=30 width=30> icon.
 
     <p align="center">
-    <img src="../img/console/AI Models/PreTrainedModels-SDKBuilt-Video.png">
+    <img src="../latest/img/console/AI Models/PreTrainedModels-SDKBuilt-Video.png">
     </p>
 
 3. Select the video (must be in mp4 format) that you wish to upload and click __UPLOAD__ button.
 
     <p align="center">
-    <img src="../img/console/AI Models/VideoInference-UploadVideo.png">
+    <img src="../latest/img/console/AI Models/VideoInference-UploadVideo.png">
     </p>
 
 4. When the video upload is completed, it will be listed under __Select Uploaded Videos__.
@@ -49,17 +49,17 @@ To view the images, from __AI Models__ page, click on the successfully trained m
 5. From __Select Upload Videos__ list, select the video which you want to process using the AI model and click __PROCESS VIDEO__.
 
     <p align="center">
-    <img src="../img/console/AI Models/VideoInference-SelectAndProcess.png">
+    <img src="../latest/img/console/AI Models/VideoInference-SelectAndProcess.png">
     </p>
 6.  When the video processing begins, it will be listed under __Status of processing predictions__ list. It will take a couple of munited for the processing to complete.
 
     <p align="center">
-    <img src="../img/console/AI Models/VideoInference-InProgress.png">
+    <img src="../latest/img/console/AI Models/VideoInference-InProgress.png">
     </p>
 
 7. Once it is complete, the processed video will be listed under __Videos with predictions__. To video the processed video, click the __VIEW PROCESSED VIDEO__ icon. A new tab in your broswer will be opened with the video. 
 
     <p align="center">
-    <img src="../img/console/AI Models/VideoInference-Processed.png">
+    <img src="../latest/img/console/AI Models/VideoInference-Processed.png">
     </p>
 
