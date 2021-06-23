@@ -10,7 +10,25 @@ This option is a great way to see the Xailient SDK in action using a desktop OS 
 
 We recommend this option for users who don't have access to an IoT device or Linux VM, or that simply want to be able to use a Xailient SDK from their Mac or Windows computers.
 
+## Options for Docker Container Implementation
+
+There are two options available for you to choose from
+
+### Option 1: Use our pre-build image for batch processing 
+
 The latest version (1.0.1) of our container enables users to **batch process images and videos** using their own custom trained model.
+
+For more details, refer to [Overview of the Xailient SDK Container](https://xailient-docs.readthedocs.io/en/latest/container.html#overview-of-the-xailient-sdk-container) section of this page.
+
+### Option 2: Build a customized Docker container
+
+Use example scripts to customize and build your own version of the docker container. You can tailor it as per your requirements.
+
+For more details, refer to the [example scripts](https://github.com/XailientPublic/example_scripts/tree/master/XailientDockerAPI/docker_x86_64).
+
+
+!!! note
+      The remainder of this page explains about **Option 1: Use our pre-build image for batch processing**
 
 ## Overview of the Xailient SDK Container 
 
