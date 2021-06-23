@@ -13,10 +13,7 @@ nav:
     - Monitor Your AI: monitor.md
     - Subscription: subscribe.md
     - API Documentation: xailient_sdk_api.md 
-    - Sample Code: sample_code.md
-    - Free Tools: free_tools.md
-    - Tutorials: 
-        - Running Multiple Models: run_multiple_models_tutorial.md
+    - Example Codes and Utilities: sample_code.md
     - FAQs: faqs.md
     - Did not find what you are looking for?: support.md
 theme:
