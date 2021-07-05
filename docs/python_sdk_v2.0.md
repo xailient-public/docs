@@ -99,7 +99,7 @@ bboxes = detectum.process_image(numpy.ndarray)
 | _         |    -        |        -      |
 | bboxes         |    list      | Each item (bbox) in the list is a dictionary of bounding box coordinates, where bbox.xmin = xmin, bbox.ymin = ymin, bbox.xmax = xmax, bbox.ymax = ymax |
 
-#### Example
+#### Example - Using OpenCV to read image
 
 ``` python
 import os
@@ -110,6 +110,32 @@ detectum = roi_bbox.ROIBBoxModel()
 
 data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
 im = cv.imread(os.path.join(data_dir, 'beatles.jpg'))
+# opencv reads BGR format so we have to convert this to RGB
+im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+
+bboxes = detectum.process_image(im)
+
+# Loop through list (if empty this will be skipped) and overlay green bboxes
+# Format of bboxes is: xmin, ymin (top left), xmax, ymax (bottom right)
+for bbox in bboxes:
+    pt1 = (bbox.xmin, bbox.ymin)
+    pt2 = (bbox.xmax, bbox.ymax)
+    cv.rectangle(im, pt1, pt2, (0, 255, 0))
+
+cv.imwrite('beatles_output.jpg', im)
+```
+
+#### Example -  Using skimage to read image
+
+``` python
+import os
+from xailient import roi_bbox
+import skimage.io
+
+detectum = roi_bbox.ROIBBoxModel()
+
+data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+im = skimage.io.imread(os.path.join(data_dir, 'beatles.jpg'))
 bboxes = detectum.process_image(im)
 
 # Loop through list (if empty this will be skipped) and overlay green bboxes
