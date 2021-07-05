@@ -22,7 +22,7 @@ theme:
     palette:
       primary: 'deep purple'
       accent: 'deep purple'
-    logo: 'img/favicon.png'
+    logo: 'img/Xailient_X.jpg'
     favicon: 'img/favicon.png'
 extra_css:
 - 'stylesheets/extra.css'
