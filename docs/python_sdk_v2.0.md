@@ -123,7 +123,7 @@ for bbox in bboxes:
     cv.rectangle(im, pt1, pt2, (0, 255, 0))
 
 # conver it back to RGB
-im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
+im = cv.cvtColor(im, cv.COLOR_RGB2BGR)
 cv.imwrite('beatles_output.jpg', im)
 ```
 
@@ -149,6 +149,6 @@ for bbox in bboxes:
     cv.rectangle(im, pt1, pt2, (0, 255, 0))
 
 # conver it back to RGB
-im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
+im = cv.cvtColor(im, cv.COLOR_RGB2BGR)
 cv.imwrite('beatles_output.jpg', im)
 ```
