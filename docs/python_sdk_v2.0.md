@@ -122,8 +122,8 @@ for bbox in bboxes:
     pt2 = (bbox.xmax, bbox.ymax)
     cv.rectangle(im, pt1, pt2, (0, 255, 0))
 
-# conver it back to RGB
-im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
+# convert it back to RGB
+im = cv.cvtColor(im, cv.COLOR_RGB2BGR)
 cv.imwrite('beatles_output.jpg', im)
 ```
 
@@ -133,7 +133,6 @@ cv.imwrite('beatles_output.jpg', im)
 import os
 from xailient import roi_bbox
 import skimage.io
-import cv2 as cv
 
 detectum = roi_bbox.ROIBBoxModel()
 
@@ -148,7 +147,5 @@ for bbox in bboxes:
     pt2 = (bbox.xmax, bbox.ymax)
     cv.rectangle(im, pt1, pt2, (0, 255, 0))
 
-# conver it back to RGB
-im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
-cv.imwrite('beatles_output.jpg', im)
+skimage.io.imsave('beatles_output.jpg', im)
 ```
